@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Pod
+metadata:
+ name: jss
+spec:
+ containers:
+   - name: jss
+ image: my-registry-url:5000/my-cool-image:0.1
+ imagePullSecrets:
+   - name: registrypullsecret

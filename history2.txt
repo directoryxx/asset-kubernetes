@@ -1,0 +1,2000 @@
+  405  kubectl delete ingress example
+  406  nano ingress-example2.yaml 
+  407  kubectl get secret
+  408  kubectl get secret test-tls
+  409  kubectl describe secret test-tls
+  410  nano ingress-example2.yaml 
+  411  kubectl apply -f ingress-example2.yaml 
+  412  kubectl get pods -A
+  413  kubectl logs pods ingress-nginx-controller-7fd7d8df56-vw5md
+  414  kubectl logs ingress-nginx-controller-7fd7d8df56-vw5md
+  415  kubectl logs ingress-nginx-controller-7fd7d8df56-vw5md -n ingress-nginx
+  416  curl https://172.42.42.101
+  417  curl http://172.42.42.101
+  418  nano ingress-example2.yaml 
+  419  kubectl apply -f ingress-example2.yaml 
+  420  nano ingress-example2.yaml 
+  421  kubectl apply -f ingress-example2.yaml 
+  422  ls
+  423  nano deploy.yaml 
+  424  kubectl apply -f deploy.yaml 
+  425  kubectl delete -f deploy.yaml 
+  426  kubectl get ns
+  427  kubectl get ingress
+  428  kubectl delete inress nginx-test
+  429  kubectl delete ingress nginx-test
+  430  kubectl get ingress
+  431  kubectl get ns
+  432  kubectl describe ns ingress-nginx
+  433  history
+  434  history | grep logging
+  435  kubectl get namespace ingress-nginx -o json > logging.json
+  436  nano logging.json 
+  437  kubectl replace --raw "/api/v1/namespaces/ingress-nginx/finalize" -f ./logging.json
+  438  kubectl get ns
+  439  ls
+  440  kubectl apply -f deploy.yaml 
+  441  kubectl get pods -A
+  442  kubectl get pods -A -o wide
+  443  kubectl get svc -A
+  444  kubectl edit svc ingress-nginx-controller -n ingress-nginx
+  445  kubectl get svc -A
+  446  ls
+  447  kubectl apply -f ingress-example2.yaml 
+  448  kubectl delete -A ValidatingWebhookConfiguration ingress-nginx-admission
+  449  kubectl apply -f ingress-example2.yaml 
+  450  kubectl get svc -A
+  451  nano ingress-example2.yaml 
+  452  kubectl apply -f ingress-example2.yaml 
+  453  kubectl get svc -A -o wide
+  454  kubectl edit svc kubernetes-dashboard -n kubernetes-dashboard
+  455  kubectl get svc -A -o wide
+  456  nano ingress-example2.yaml 
+  457  kubectl apply -f ingress-example2.yaml 
+  458  nano ingress-example2.yaml 
+  459  kubectl apply -f ingress-example2.yaml 
+  460  kubectl get ingress
+  461  kubectl describe ingress nginx-test
+  462  kubectl apply -f ingress-example2.yaml -n jenkins
+  463  kubectl apply -f ingress-example2.yaml -n kubernetes-dashboards
+  464  kubectl apply -f ingress-example2.yaml -n kubernetes-dashboard
+  465  kubectl get ingress -A
+  466  kubectl describe ingress nginx-test -n jenkins
+  467  rm default-http-backend.yaml 
+  468  nano default-http-backend.yaml
+  469  kubectl apply -f default-http-backend.yaml 
+  470  kubectl edit ingress example-ingress
+  471  kubectl edit ingress nginx-test
+  472  kubectl edit ingress nginx-test -n jenkins
+  473  kubectl edit ingress nginx-test -n kubernetes-dashboard
+  474  kubectl get ingress -A
+  475  kubectl delete ingress nginx-test -n jenkins
+  476  kubectl delete ingress nginx-test -n kubernetes-dashboard
+  477  exit
+  478  kubectl get nodes
+  479  kubectl get pods -A
+  480  kubectl get ingress -A
+  481  kubectl edit ingress nginx-test
+  482  ls
+  483  cd ingress-example/
+  484  ls
+  485  cp ingress-example2.yaml ingress-jenkins.yaml
+  486  nano ingress-jenkins.yaml 
+  487  kubectl apply -f ingress-jenkins.yaml -n jenkins
+  488  kubectl get ingress -n jenkins
+  489  kubectl get ingress -n jenkins -A
+  490  history
+  491  history | grep "crt"
+  492  cd ../certs/
+  493  kubectl create secret tls test-tls --key="tls.key" --cert="tls.crt" -n jenkins
+  494  kubectl get ingress -A
+  495  ls
+  496  kubectl create secret tls test-tls --key="tls.key" --cert="tls.crt" -n kubernetes-dashboard
+  497  ls
+  498  cd ../ingress-example/
+  499  ls
+  500  cp ingress-example2.yaml ingress-dashboard.yaml
+  501  nano ingress-dashboard.yaml 
+  502  kubectl apply -f ingress-dashboard.yaml 
+  503  kubectl get ingress -A
+  504  kubectl apply -f ingress-dashboard.yaml -n kubernetes-dashboard
+  505  kubectl get ingress -A
+  506  ls
+  507  nano ingress-example2.yaml 
+  508  kubectl apply -f ingress-example
+  509  kubectl apply -f ingress-example2.yaml 
+  510  kubectl get ingress -A
+  511  kubectl desribe nginx-test -n kubernetes-dashboard
+  512  kubectl describe nginx-test -n kubernetes-dashboard
+  513  kubectl describe ingress nginx-test -n kubernetes-dashboard
+  514  kubectl get svc -A
+  515  kubectl edit svc kubernetes-dashboard -n kubernetes-dashboard
+  516  kubectl get svc -A
+  517  kubectl get pods -A
+  518  kubectl describe pods kubernetes-dashboard-7f99b75bf4-rgns2
+  519  kubectl describe pods kubernetes-dashboard-7f99b75bf4-rgns2 -n kubernetes-dashboard
+  520  history
+  521  cd ../
+  522  ls
+  523  cd kubernetes-dashboard/
+  524  ls
+  525  nano recommended.yaml 
+  526  kubectl delete -f recommended.yaml 
+  527  kubectl apply -f recommended.yaml 
+  528  kubectl get pods -A  -o wide
+  529  kubectl get service -n kubernetes-dashboard  -o wide
+  530  kubectl get pods -A  -o wide
+  531  kubectl describe pods dashboard-metrics-scraper-6b4884c9d5-fxt54 -n kubernetes-dashboard
+  532  kubectl get secret -A
+  533  kubectl describe secret kubernetes-dashboard-token-pls7v
+  534  kubectl describe secret kubernetes-dashboard-token-pls7v -n kubernetes-dashboard
+  535  kubectl logs dashboard-metrics-scraper-6b4884c9d5-fxt54
+  536  kubectl logs dashboard-metrics-scraper-6b4884c9d5-fxt54 -n kubernetes-dashboard
+  537  kubectl get pods -A
+  538  kubectl logs kubernetes-dashboard-7f99b75bf4-2jpfh -n kubernetes-dashboard
+  539  kubectl cluster-info
+  540  kubectl logs kubernetes-dashboard-7f99b75bf4-2jpfh -n kubernetes-dashboard
+  541  kubectl logs dashboard-metrics-scraper-6b4884c9d5-fxt54 -n kubernetes-dashboard
+  542  kubectl cluster-info
+  543  kubectl delete -f kubectl apply -f https://github.com/kubernetes-sigs/metrics-server/releases/download/v0.3.7/components.yaml
+  544  kubectl delete -f https://github.com/kubernetes-sigs/metrics-server/releases/download/v0.3.7/components.yaml
+  545  kubectl apply -f https://github.com/kubernetes-sigs/metrics-server/releases/download/v0.3.7/components.yaml
+  546  kubectl get pods -A
+  547  kubectl logs dashboard-metrics-scraper-6b4884c9d5-fxt54 -n kubernetes-dashboard
+  548  kubectl logs dashboard-metrics-scraper-6b4884c9d5-fxt54 -n kubernetes-dashboard --watch
+  549  kubectl logs dashboard-metrics-scraper-6b4884c9d5-fxt54 -n kubernetes-dashboard 
+  550  kubectl logs dashboard-metrics-scraper-6b4884c9d5-fxt54 -n kubernetes-dashboard --watch
+  551  kubectl logs dashboard-metrics-scraper-6b4884c9d5-fxt54 -n kubernetes-dashboard 
+  552  kubectl logs kubernetes-dashboard-7f99b75bf4-2jpfh -n kubernetes-dashboard
+  553  kubectl logs dashboard-metrics-scraper-6b4884c9d5-fxt54 -n kubernetes-dashboard 
+  554  kubectl get nodes -o wide
+  555  kubectl logs dashboard-metrics-scraper-6b4884c9d5-fxt54 -n kubernetes-dashboard 
+  556  kubectl logs dashboard-metrics-scraper-6b4884c9d5-fxt54 -watch -n kubernetes-dashboard 
+  557  kubectl logs dashboard-metrics-scraper-6b4884c9d5-fxt54 -w -n kubernetes-dashboard 
+  558  kubectl logs dashboard-metrics-scraper-6b4884c9d5-fxt54 w -n kubernetes-dashboard 
+  559  kubectl logs dashboard-metrics-scraper-6b4884c9d5-fxt54 -n kubernetes-dashboard w
+  560  kubectl logs dashboard-metrics-scraper-6b4884c9d5-fxt54 -n kubernetes-dashboard 
+  561  exit
+  562  ls
+  563  kubectl get pods -A
+  564  kubectl get pods -A -o wide
+  565  kubectl logs kubernetes-dashboard-7f99b75bf4-2jpfh -n kubernetes-dashboard
+  566  kubectl logs dashboard-metrics-scraper-6b4884c9d5-fxt54 -n kubernetes-dashboard
+  567  kubectl logs kubernetes-dashboard-7f99b75bf4-2jpfh -n kubernetes-dashboard
+  568  kubectl logs dashboard-metrics-scraper-6b4884c9d5-fxt54 -n kubernetes-dashboard
+  569  kubectl get pods -A
+  570  kubectl get svc
+  571  kubectl get svc -A
+  572  kubectl logs dashboard-metrics-scraper-6b4884c9d5-fxt54 -n kubernetes-dashboard
+  573  kubectl get pods -A
+  574  kubectl logs metrics-server-f7cdcc99-chr4x -n kube-system
+  575  kubectl delete node
+  576  kubectl delete node worker2
+  577  kubectl delete node lworker2
+  578  kubectl delete node kworker2
+  579  kubectl logs metrics-server-f7cdcc99-chr4x -n kube-system
+  580  exit
+  581  ls
+  582  mkdir metrics-server
+  583  cd met
+  584  cd metrics-server/
+  585  ls
+  586  kwget https://github.com/kubernetes-sigs/metrics-server/releases/download/v0.3.7/components.yaml
+  587  wget https://github.com/kubernetes-sigs/metrics-server/releases/download/v0.3.7/components.yaml
+  588  kubectl delete -f components.yaml 
+  589  nano components.yaml 
+  590  kubectl apply -f components.yaml 
+  591  kubectl get pods -A
+  592  kubectl logs metrics-server-584b5f4754-9lwjf -n kube-system
+  593  kubectl logs dashboard-metrics-scraper-6b4884c9d5-fxt54 -n kubernetes-dashboard
+  594  kubectl logs metrics-server-584b5f4754-9lwjf -n kube-system
+  595  kubectl logs dashboard-metrics-scraper-6b4884c9d5-fxt54 -n kubernetes-dashboard
+  596  kubectl logs kubernetes-dashboard-7f99b75bf4-2jpfh -n kubernetes-dashboard
+  597  exit
+  598  kubectl get pods _A
+  599  kubectl get pods -A
+  600  kubectl logs metrics-server-584b5f4754-9lwjf -n kube-system
+  601  kubectl logs dashboard-metrics-scraper-6b4884c9d5-fxt54 -n kubernetes-dashboard
+  602  kubectl top node
+  603  systemctl status kube-apiserver -l
+  604  kube-apiserver
+  605  cd /etc/kubernetes/manifests/
+  606  nano kube-apiserver.yaml 
+  607  sudo su
+  608  exit
+  609  kubectl cluster-info
+  610  kubectl cluster-info dump
+  611  systemctl status kubelet
+  612  sudo nano /etc/kubernetes/manifests/kube-apiserver.yaml 
+  613  sudo systemctl restart kubelet
+  614  systemctl status kubelet
+  615  kubectl cluster-info
+  616  kubectl top node
+  617  sudo nano /etc/kubernetes/manifests/kube-apiserver.yaml 
+  618  kubectl get apiservices |egrep metrics
+  619  kubectl get deploy,svc -n kube-system |egrep metrics-server
+  620  kubectl get apiservice v1beta1.metrics.k8s.io -o yaml
+  621  kubectl version
+  622  kubectl logs metrics-server-584b5f4754-9lwjf -n kube-system
+  623  kubectl logs dashboard-metrics-scraper-6b4884c9d5-fxt54 -n kubernetes-dashboard
+  624  kubectl top node
+  625  sudo su
+  626  kubectl get apiservice
+  627  kubectl describe kubectl get --raw /apis/metrics.k8s.io/v1beta1
+  628  kubectl get --raw /apis/metrics.k8s.io/v1beta1
+  629  kubectl describe apiservice v1beta1.metrics.k8s.io
+  630  kubectl get pods -n kube-system
+  631  kubectl logs metrics-server-584b5f4754-9lwjf -n kube-system
+  632  kubectl get svc -A
+  633  ls
+  634  cd metrics-server/
+  635  ls
+  636  nano components.yaml 
+  637  kubectl apply -f components.yaml 
+  638  kubectl logs metrics-server-584b5f4754-9lwjf -n kube-system
+  639  kubectl get svc -A
+  640  kubectl top node
+  641  kubectl get pods -A
+  642  kubectl logs  metrics-server-64fc878566-2j8f9 -n kube-system
+  643  nano components.yaml 
+  644  kubectl apply -f components.yaml 
+  645  kubectl get pods -A
+  646  kubectl logs  metrics-server-584b5f4754-lfz4m  -n kube-system
+  647  kubectl get --raw /api/v1/namespaces/kube-system/services/https:metrics-server:443/proxy
+  648  kubectl get --raw /api/v1/namespaces/kube-system/services/https:metrics-server:4443/proxy
+  649  kubectl get --raw /api/v1/namespaces/kube-system/services/https:metrics-server:443/proxy
+  650  kubectl delete -f components.yaml 
+  651  helm repo add bitnami https://charts.bitnami.com/bitnami
+  652  helm install my-release-metrics bitnami/metrics-server
+  653  helm delete my-release-metrics
+  654  helm install my-release-metrics --set apiService.create=true rbac.create=true bitnami/metrics-server
+  655  helm install my-release-metrics \  --set apiService.create=true rbac.create=true bitnami/metrics-server
+  656  helm install my-release-metrics \  --set apiService.create=true --set rbac.create=true bitnami/metrics-server
+  657  helm install my-release-metrics \  --set apiService.create=true --set rbac.create=true \  bitnami/metrics-server
+  658  helm install my-release-metrics   --set rbac.create=true --set apiService.create=true bitnami/metrics-server
+  659  kubectl get --raw "/apis/metrics.k8s.io/v1beta1/nodes"
+  660  kubectl get nodes -A
+  661  kubectl get pods -A
+  662  kubectl describe pods my-release-metrics-metrics-server-6cb6d8df65-fq6l5
+  663  kubectl get pods -A
+  664  kubectl get --raw "/apis/metrics.k8s.io/v1beta1/nodes"
+  665  kubectl logs my-release-metrics-metrics-server-6cb6d8df65-fq6l5
+  666  kubectl get apiservice
+  667  kubectl get svc -A
+  668  kubectl describe apiservice v1beta1.metrics.k8s.io
+  669  kubectl get deployment -A
+  670  kubectl edit deployment my-release-metrics-metrics-server
+  671  kubectl get deployment -A
+  672  kubectl describe deployment my-release-metrics-metrics-server
+  673  kubectl get --raw "/apis/metrics.k8s.io/v1beta1/nodes"
+  674  kubectl top node
+  675  kubectl edit deployment my-release-metrics-metrics-server
+  676  kubectl top node
+  677  kubectl get pods -A
+  678  kubectl logs my-release-metrics-metrics-server-566788c4f-d8j4r
+  679  kubectl get pods -A
+  680  my-release-metrics-metrics-server-5c848c856b-62qk2
+  681  kubectl describe pods my-release-metrics-metrics-server-5c848c856b-62qk2
+  682  kubectl get pods -A -o wide
+  683  kubectl logs my-release-metrics-metrics-server-566788c4f-d8j4r
+  684  my-release-metrics-metrics-server-5c848c856b-62qk2ku
+  685  kubectl logs my-release-metrics-metrics-server-566788c4f-d8j4r
+  686  kubectl edit deployment my-release-metrics-metrics-server
+  687  kubectl logs my-release-metrics-metrics-server-566788c4f-d8j4r
+  688  history
+  689  ubectl get --raw "/apis/metrics.k8s.io/v1beta1/nodes"
+  690  kubectl get --raw "/apis/metrics.k8s.io/v1beta1/nodes"
+  691  kubectl top node
+  692  kubectl logs my-release-metrics-metrics-server-566788c4f-d8j4r
+  693  exit
+  694  kubectl logs my-release-metrics-metrics-server-566788c4f-d8j4r
+  695  kubectl top node
+  696  kubectl get --raw "/apis/metrics.k8s.io/v1beta1/nodes"
+  697  kubectl top node
+  698  kubectl logs my-release-metrics-metrics-server-566788c4f-d8j4r
+  699  ping kmaster
+  700  ping kworker1
+  701  kubectl get deployment
+  702  kubectl edit deployment my-release-metrics-metrics-server
+  703  kubectl get deployment
+  704  kubectl logs my-release-metrics-metrics-server-566788c4f-d8j4r
+  705  kubectl top node
+  706  kubectl logs my-release-metrics-metrics-server-566788c4f-d8j4r
+  707  kubectl get nodes -o wide
+  708  exit
+  709  kubectl top node
+  710  kubectl logs my-release-metrics-metrics-server-566788c4f-d8j4r
+  711  kubectl top node
+  712  kubectl get --raw "/apis/metrics.k8s.io/v1beta1/nodes"
+  713  kubectl top node
+  714  kubectl logs my-release-metrics-metrics-server-566788c4f-d8j4r
+  715  kubectl edit deployment my-release-metrics-metrics-server
+  716  kubectl logs my-release-metrics-metrics-server-566788c4f-d8j4r
+  717  curl https://kworker1:10250/stats/summary?only_cpu_and_memory=true
+  718  curl https://kworker1:10250/stats/summary?only_cpu_and_memory=true --ignore
+  719  curl https://kworker1:10250/stats/summary?only_cpu_and_memory=true --insecure
+  720  kubectl logs my-release-metrics-metrics-server-566788c4f-d8j4r
+  721  helm upgrade metrics-server stable/metrics-server --set "args[0]=--kubelet-preferred-address-types=InternalIP"
+  722  '
+  723  kubectl get deployment
+  724  kubelet edit deploy my-release-metrics-metrics-server
+  725  kubelet edit deployent my-release-metrics-metrics-server
+  726  kubelet edit deployment my-release-metrics-metrics-server
+  727  history
+  728  kubectl edit deployment my-release-metrics-metrics-server
+  729  kubectl logs my-release-metrics-metrics-server-566788c4f-d8j4r
+  730  kubectl get pods -A
+  731  kubectl logs kubernetes-dashboard-7f99b75bf4-2jpfh -n kubernetes-dashboard
+  732  kubectl top pod
+  733  kubectl top pods
+  734  kubectl top node
+  735  kubectl logs kubernetes-dashboard-7f99b75bf4-2jpfh -n kubernetes-dashboard
+  736  kubectl get pods 
+  737  kubectl get pods -A
+  738  kubectl describe pods dashboard-metrics-scraper-6b4884c9d5-fxt54 -n kubernetes-dashboard
+  739  kubectl logs dashboard-metrics-scraper-6b4884c9d5-fxt54
+  740  kubectl get pods -A
+  741  kubectl logs dashboard-metrics-scraper-6b4884c9d5-fxt54
+  742  kubectl logs dashboard-metrics-scraper-6b4884c9d5-fxt54 -n kubernetes-dashboard
+  743  sudo apt install htop
+  744  htop
+  745  kubectl top node
+  746  curl https://kworker1:10250/stats/summary?only_cpu_and_memory=true --ignore
+  747  kubectl logs my-release-metrics-metrics-server-566788c4f-d8j4r
+  748  kubectl top works
+  749  kubelet edit deployent my-release-metrics-metrics-server
+  750  kubectl edit deployment my-release-metrics-metrics-server
+  751  kubectl logs my-release-metrics-metrics-server-566788c4f-d8j4r
+  752  kubectl edit deployment my-release-metrics-metrics-server
+  753  kubectl logs my-release-metrics-metrics-server-566788c4f-d8j4r
+  754  kubectl -nkube-system create configmap front-proxy-ca --from-file=front-proxy-ca.crt=/etc/kubernetes/pki/front-proxy-ca.crt -o yaml | kubectl -nkube-system replace configmap front-proxy-ca -f -
+  755  exit
+  756  kubectl top node
+  757  kubectl get pods -A
+  758  kubectl describe pod apple-app
+  759  kubectl get pods -A
+  760  kubectl get pods
+  761  kubectl top node
+  762  kubectl top pods
+  763  docker images
+  764  kubectl describe apple-app
+  765  kubectl describe pod apple-app
+  766  docker pull https://github.com/wardviaene/jenkins-course
+  767  docker pull hashicorp/http-echo
+  768  docker images
+  769  kubectl get pods -A
+  770  docker images
+  771  kubectl describe pod banana-app
+  772  kubectl get pods -A
+  773  kubectl describe pods default-http-backend
+  774  kubectl get pods -A
+  775  kubectl describe pods default-http-backend-7967b9764b-7fgw2
+  776  docker pull gcr.io/google_containers/defaultbackend:1.3
+  777  kubectl get pods -A
+  778  kubectl describe pods my-release-metrics-metrics-server-54659c4685-6hcbk
+  779  docker pull docker.io/bitnami/metrics-server:0.3.7-debian-10-r89
+  780  kubectl get pods -A
+  781  kubectl describe pods my-release-metrics-metrics-server-566788c4f-d8j4r
+  782  kubectl get pods -A
+  783  kubectl describe pods ingress-nginx-admission-create-nv7nx
+  784  kubectl describe pods ingress-nginx-admission-patch-dxkwj
+  785  kubectl describe pods ingress-nginx-controller-7fd7d8df56-mtb4h
+  786  kubectl describe pods ingress-nginx-admission-create-nv7nx -n ingress-nginx
+  787  docker pull docker.io/jettech/kube-webhook-certgen:v1.2.2
+  788  kubectl describe pods ingress-nginx-admission-patch-dxkwj -n ingress-nginx
+  789  kubectl describe pods ingress-nginx-controller-7fd7d8df56-mtb4h -ingress-nginx
+  790  kubectl describe pods ingress-nginx-controller-7fd7d8df56-mtb4h -n ingress-nginx
+  791  docker pull us.gcr.io/k8s-artifacts-prod/ingress-nginx/controller:v0.34.1@sha256:0e072dddd1f7f8fc8909a2ca6f65e76c5f0d2fcfb8be47935ae3457e8bbceb20
+  792  exit
+  793  kubect get node
+  794  kubectl get node
+  795  kubectl describe node kworker2
+  796  kubectl get node
+  797  kubectl describe node kworker2
+  798  kubectl get node
+  799  kubectl describe node kworker2
+  800  kubectl get node
+  801  kubectl describe node kworker2
+  802  kubectl top node
+  803  kubectl get pods -A
+  804  kubectl describe pods my-release-metrics-metrics-server-54659c4685-6hcbk 
+  805  kubectl get pods -A
+  806  kubectl describe pods speaker-zvzpc
+  807  kubectl describe pods speaker-zvzpc -n metallb-system
+  808  kubectl get pods -A
+  809  kubectl describe pods my-release-metrics-metrics-server-566788c4f-d8j4
+  810  kubectl edit pods my-release-metrics-metrics-server-566788c4f-d8j4
+  811  kubectl edit pods my-release-metrics-metrics-server-566788c4f-d8j4 
+  812  kubectl get pods -A
+  813  kubectl edit pods my-release-metrics-metrics-server-566788c4f-d8j4r
+  814  kubectl get svc -A
+  815  kubectl edit svc my-release-metrics-metrics-server
+  816  kubectl get pods -A
+  817  kubectl logs my-release-metrics-metrics-server-566788c4f-d8j4r
+  818  ls
+  819  cd metrics-server/
+  820  ls
+  821  nano components.yaml 
+  822  kubectl apply -f components.yaml 
+  823  kubectl delete -f components.yaml 
+  824  nano components.yaml 
+  825  kubectl edit svc my-release-metrics-metrics-server
+  826  kubectl edit pods my-release-metrics-metrics-server-566788c4f-d8j4r
+  827  kubectl get pods -A
+  828  helm uninstall my-release-metrics-metrics-server
+  829  helm release
+  830  helm --help
+  831  helm status
+  832  helm status my-release-metrics-metrics-server
+  833  helm list
+  834  helm uninstall my-release-metrics
+  835  kubectl get pods -A
+  836  ls
+  837  nano components.yaml 
+  838  kubectl apply -f components.yaml 
+  839  kubectl get pods -A
+  840  kubectl describe metrics-server-68cddbd44b-gfnnk -n kube-system
+  841  kubectl describe pods metrics-server-68cddbd44b-gfnnk -n kube-system
+  842  kubectl get pods -A
+  843  calico-node-5swqs
+  844  kubectl describe pods calico-node-5swqs
+  845  kubectl describe pods calico-node-5swqs -n kube-system
+  846  kubectl get pods -A -o wide
+  847  kubectl describe pods calico-node-5swqs -n kube-system - 
+  848  kubectl describe pods calico-node-5swqs -n kube-system 
+  849  kubectl get pods -A -o wide
+  850  kubectl describe pods metrics-server-68cddbd44b-gfnnk
+  851  kubectl describe pods metrics-server-68cddbd44b-gfnnk -n kube-system
+  852  kubectl get pods -A -o wide
+  853  kubectl describe pods metrics-server-68cddbd44b-gfnnk -n kube-system
+  854  kubectl get pods -A -o wide
+  855  kubectl describe pods metrics-server-68cddbd44b-gfnnk -n kube-system
+  856  kubectl logs metrics-server-68cddbd44b-gfnnk -n kube-system
+  857  kubectl edit pods metrics-server-68cddbd44b-gfnnk -n kube-system
+  858  nano components.yaml 
+  859  kubectl apply -f components.yaml 
+  860  kubectl edit pods metrics-server-68cddbd44b-gfnnk -n kube-system
+  861  kubectl get pods -A -o wide
+  862  kubectl logs metrics-server-5bdf6469cc-dmxmw -n kube-system
+  863  kubectl top node
+  864  kubectl logs metrics-server-5bdf6469cc-dmxmw -n kube-system
+  865  nano components.yaml 
+  866  kubectl apply -f components.yaml 
+  867  kubectl get pods -A -o wide
+  868  kubectl delete -f components.yaml 
+  869  history | grep helm
+  870  helm install my-release-metrics \  --set apiService.create=true --set rbac.create=true \  bitnami/metrics-server
+  871  helm install my-release-metrics   --set rbac.create=true --set apiService.create=true bitnami/metrics-server
+  872  kubectl get pods -A -o wide
+  873  kubectl edit pods my-release-metrics-metrics-server-6cb6d8df65-pjv74 
+  874  helm install my-release-metrics   --set rbac.create=true --set apiService.create=true --set extraArgs={}  bitnami/metrics-server
+  875  helm install my-release-metrics   --set rbac.create=true --set apiService.create=true --set extraArgs={--kubelet-preferred-address-types=InternalDNS,InternalIP,ExternalDNS,ExternalIP,Hostname,--kubelet-insecure-tls}  bitnami/metrics-server
+  876  helm uninstall my-release-metrics
+  877  helm install my-release-metrics   --set rbac.create=true --set apiService.create=true --set extraArgs={--kubelet-preferred-address-types=InternalDNS,InternalIP,ExternalDNS,ExternalIP,Hostname,--kubelet-insecure-tls}  bitnami/metrics-server
+  878  helm fetch bitnami/metrics-server --untar
+  879  ls
+  880  cd metrics-server/
+  881  ls
+  882  nano values.yaml 
+  883  kubectl uninstall my-release-metrics
+  884  helm uninstall my-release-metrics
+  885  helm uninstall my-release-metric
+  886  helm list
+  887  helm install my-release-metrics   --set rbac.create=true --set apiService.create=true -f values.yaml  bitnami/metrics-server
+  888  kubectl get pods -A
+  889  kubectl describe pods my-release-metrics-metrics-server-69485bdb46-djl9x 
+  890  kubectl logs my-release-metrics-metrics-server-69485bdb46-djl9x 
+  891  kubectl top node
+  892  kubectl get pods -A
+  893  kubectl logs dashboard-metrics-scraper-6b4884c9d5-fxt54 -n kubernetes-dashboard
+  894  nano values.yaml 
+  895  helm uninstall my-release-metrics
+  896  helm install my-release-metrics   --set rbac.create=true --set apiService.create=true -f values.yaml  bitnami/metrics-server
+  897  kubectl get --raw "/apis/metrics.k8s.io/v1beta1/nodes"
+  898  helm install my-release-metrics -f values.yaml  bitnami/metrics-server
+  899  kubectl get pods -A
+  900  kubectl get apiservice
+  901  kubectl describe apiserver v1beta1.metrics.k8s.io
+  902  kubectl describe apiservice v1beta1.metrics.k8s.io
+  903  helm uninstall my-release-metrics
+  904  helm install my-release-metrics -f values.yaml  bitnami/metrics-server
+  905  nano values.yaml 
+  906  kubectl get --raw "/apis/metrics.k8s.io/v1beta1/nodes"
+  907  ls
+  908  kubectl get pods -A -o wide
+  909  kubectl get svc -A -o wide
+  910  curl 10.96.73.192:443
+  911  curl 10.104.109.121:8080
+  912  kubectl get --raw "/apis/metrics.k8s.io/v1beta1/nodes"
+  913  kubectl get pods -A
+  914  kubectl logs my-release-metrics-metrics-server-69485bdb46-dhxjk
+  915  kubectl get svc -A
+  916  kubectl edit svc my-release-metrics-metrics-server 
+  917  kubectl get svc -A
+  918  kubectl get --raw "/apis/metrics.k8s.io/v1beta1/nodes"
+  919  kubectl edit apiservice v1beta1.metrics.k8s.io
+  920  kubectl get --raw "/apis/metrics.k8s.io/v1beta1/nodes"
+  921  ping 10.109.196.199
+  922  curl 10.109.196.199
+  923  ls
+  924  cd ../
+  925  ls
+  926  nano components.yaml 
+  927  helm uninstall my-release-metrics
+  928  kubectl get --raw "/apis/metrics.k8s.io/v1beta1/nodes"
+  929  nano components.yaml 
+  930  kubectl apply -f components.yaml 
+  931  nano components.yaml 
+  932  kubectl delete -f components.yaml 
+  933  ls
+  934  cd metrics-server/
+  935  ls
+  936  nano values.yaml 
+  937  helm install my-release-metrics -f values.yaml  bitnami/metrics-server
+  938  kubectl get --raw "/apis/metrics.k8s.io/v1beta1/nodes"
+  939  kubectl top
+  940  kubectl top node
+  941  kubectl get pods -A
+  942  kubectl logs my-release-metrics-metrics-server-8694db558-jbwsb
+  943  nano values.yaml 
+  944  helm uninstall my-release-metrics
+  945  helm install my-release-metrics -f values.yaml  bitnami/metrics-server
+  946  kubectl edit configmap coredns -n kube-system
+  947  kubectl get nodes
+  948  kubectl top nodes
+  949  kubectl get --raw "/apis/metrics.k8s.io/v1beta1/nodes"
+  950  helm uninstall my-release-metrics
+  951  nano values.yaml 
+  952  helm install my-release-metrics -f values.yaml  bitnami/metrics-server
+  953  kubectl get --raw "/apis/metrics.k8s.io/v1beta1/nodes"
+  954  kubectl logs --follow 
+  955  kubectl get pods
+  956  kubectl logs --follow my-release-metrics-metrics-server-8694db558-px4kl
+  957  exit
+  958  kubectl get pods -A
+  959  kubectl logs my-release-metrics-metrics-server-8694db558-px4kl
+  960  kubectl get --raw "/apis/metrics.k8s.io/v1beta1/nodes"
+  961  kubectl logs my-release-metrics-metrics-server-8694db558-px4kl
+  962  kubectl logs dashboard-metrics-scraper-6b4884c9d5-fxt54
+  963  kubectl logs dashboard-metrics-scraper-6b4884c9d5-fxt54 -n kubernetes-dashboard
+  964  kubectl top node
+  965  kubectl top pods
+  966  kubectl get svc -A
+  967  kubect edit svc my-release-metrics-metrics-server
+  968  kubectl edit svc my-release-metrics-metrics-server
+  969  kubectl logs kubernetes-dashboard-7f99b75bf4-2jpfh -n kubernetes-dashboard
+  970  ls
+  971  cd kubernetes-dashboard/
+  972  ls
+  973  kubectl delete -f recommended.yaml 
+  974  helm install kubernetes-dashboard/kubernetes-dashboard --name my-release   --set=service.externalPort=8080,resources.limits.cpu=200m
+  975  helm repo add kubernetes-dashboard https://kubernetes.github.io/dashboard/
+  976  kubectl config get-contexts
+  977  helm install dashboard-demo stable/kubernetes-dashboard --set rbac.clusterAdminRole=true
+  978  export POD_NAME=$(kubectl get pods -n default -l "app=kubernetes-dashboard,release=dashboard-demo" -o jsonpath="{.items[0].metadata.name}")
+  979  echo $POD_NAME
+  980  kubectl get svc -A
+  981  kubectl get ingress
+  982  kubectl edit ingress nginx-test
+  983  kubectl get ingress
+  984  kubectl get pods
+  985  kubectl describe pods dashboard-demo-kubernetes-dashboard-588cbd9ffc-nj4r9
+  986  kubectl get pods
+  987  kubectl logs dashboard-demo-kubernetes-dashboard-588cbd9ffc-nj4r9 
+  988  helm uninstall dashboard-demo
+  989  ls
+  990  nano recommended.yaml 
+  991  rm recommended.yaml 
+  992  wget https://raw.githubusercontent.com/kubernetes/dashboard/v2.0.2/aio/deploy/recommended.yaml
+  993  nano recommended.yaml 
+  994  kubectl create namespace kubernetes-dashboard
+  995  kubectl get all -n kubernetes-dashboard
+  996  kubectl delete ns kubernetes-dashboard
+  997  kubectl create namespace kubernetes-dashboard
+  998  ls
+  999  cd ../
+ 1000  cd letsencrypt/
+ 1001  ls
+ 1002  cd live/directoryxx.com/
+ 1003  cp fullchain.pem ~/certs/dashboard.crt 
+ 1004  cp privkey.pem  ~/certs/dashboard.key 
+ 1005  cd ~/kubernetes-dashboard/
+ 1006  ls
+ 1007  cd ~/certs/
+ 1008  ls
+ 1009  kubectl create secret generic kubernetes-dashboard-certs --from-file=dashboard.key --from-file=dashboard.crt -n kubernetes-dashboard
+ 1010  cd ../kubernetes-dashboard/
+ 1011  kubectl apply -f recommended.yaml 
+ 1012  kubectl get pods -A
+ 1013  history
+ 1014  history | grep "tls.key"
+ 1015  kubectl update
+ 1016  kubectl edit
+ 1017  cd ../letsencrypt/live/directoryxx.com/
+ 1018  cp fullchain.pem ~/certs/tls.crt 
+ 1019  cp privkey.pem ~/certs/tls.key 
+ 1020  cd ~/certs/
+ 1021  kubectl edit secret tls test-tls --key="tls.key" --cert="tls.crt"
+ 1022  kubectl delete secret tls test-tls
+ 1023  kubectl get secret -A
+ 1024  kubectl delete secret tls test-tls -n jenkins
+ 1025  kubectl delete secret test-tls -n jenkins
+ 1026  kubectl get secret -A
+ 1027  history | grep "tls.key"
+ 1028  kubectl create secret tls test-tls --key="tls.key" --cert="tls.crt"
+ 1029  kubectl create secret tls test-tls --key="tls.key" --cert="tls.crt" -n jenkins
+ 1030  kubectl create secret tls test-tls --key="tls.key" --cert="tls.crt" -n kubernetes-dashboard
+ 1031  kubectl get pods -A
+ 1032  kubectl describe pods dashboard-metrics-scraper-6b4884c9d5-w82q4
+ 1033  kubectl describe pods dashboard-metrics-scraper-6b4884c9d5-w82q4 -n kubernetes-dashboard
+ 1034  exit
+ 1035  kubectl get pods -A
+ 1036  exit
+ 1037  kubectl get pods -A
+ 1038  kubectl describe pods jenkins-687c94f6bf-9ll2h -n jenkins
+ 1039  kubectl get svc -A
+ 1040  history | grep patch
+ 1041  kubectl get svc -A -o wide
+ 1042  history | grep patch 
+ 1043  kubectl patch svc kubernetes-dashboard -p '{"spec":{"externalIPs":["172.42.42.102"]}}' -n kubernetes-dashboard
+ 1044  history | grep patch 
+ 1045  kubectl get svc -A -o wide
+ 1046  kubectl describe pods kubernetes-dashboard -n kubernetes-dashboard
+ 1047  kubectl logs dashboard-metrics-scraper
+ 1048  kubectl logs dashboard-metrics-scraper -n kubernetes-dashboard
+ 1049  kubectl get pods -A
+ 1050  kubectl logs dashboard-metrics-scraper-6b4884c9d5-w82q4 -n kubernetes-dashboard
+ 1051  cd kubernetes-dashboard/
+ 1052  ls
+ 1053  kubectl delete -f recommended.yaml 
+ 1054  kubectl get pods -A
+ 1055  kubectl get svc
+ 1056  kubectl get svc -A
+ 1057  kubectl edit svc my-release-metrics-metrics-server
+ 1058  history
+ 1059  kubectl get --raw "/apis/metrics.k8s.io/v1beta1/nodes"
+ 1060  kubectl apply -f https://raw.githubusercontent.com/kubernetes/dashboard/v2.0.3/aio/deploy/recommended.yaml
+ 1061  kubectl get pods -A
+ 1062  kubectl get svc -A
+ 1063  kubectl edit svc kubernetes-dashboard -n kubernetes-dashboard
+ 1064  kubectl get svc -A
+ 1065  kubectl get pods -A
+ 1066  kubectl proxy --help
+ 1067  kubectl get secrets -A
+ 1068  kubectl describe secret  directoryx-admin-token-5p8nm -n kube-system
+ 1069  exut
+ 1070  exit
+ 1071  history > history.txt
+ 1072  ls
+ 1073  mkdir mysql-wp
+ 1074  cd mysql-wp/
+ 1075  cat <<EOF >./kustomization.yaml
+ 1076  secretGenerator:
+ 1077  - name: mysql-pass
+ 1078    literals:
+ 1079    - password=YOUR_PASSWORD
+ 1080  EOF
+ 1081  cat kustomization.yaml 
+ 1082  nano mysql-deployment.yaml
+ 1083  kubectl apply -f mysql-deployment.yaml 
+ 1084  curl -LO https://k8s.io/examples/application/wordpress/wordpress-deployment.yaml
+ 1085  cat <<EOF >>./kustomization.yaml
+ 1086  resources:
+ 1087    - mysql-deployment.yaml
+ 1088    - wordpress-deployment.yaml
+ 1089  EOF
+ 1090  nano kustomization.yaml 
+ 1091  kubectl apply -k ./
+ 1092  kubectl get secrets
+ 1093  kubectl get pvc
+ 1094  kubectl get pods
+ 1095  kubectl get services wordpress
+ 1096  kubectl edit svc wordpress
+ 1097  kubectl get services wordpress
+ 1098  kubectl get pods -A 
+ 1099  kubectl describe pods wordpress-5bbd7fd785-d7wms
+ 1100  mkdir /data/mysql-volume
+ 1101  ls
+ 1102  nano mysql-deployment.yaml 
+ 1103  ls
+ 1104  ls -al ../jenkins/
+ 1105  cp ../jenkins/jenkins-pv.yaml mysql-pv.yaml
+ 1106  nano mysql-
+ 1107  nano mysql-pv.yaml 
+ 1108  nano mysql-deployment.yaml 
+ 1109  cat mysql-pv.yaml 
+ 1110  nano ../jenkins/jenkins-latest-chart.yaml 
+ 1111  kubectl get secret -A
+ 1112  kubectl describe secret directoryx-admin-token-5p8nm -n kube-system
+ 1113  ls
+ 1114  kubectl delete -k ./
+ 1115  ls
+ 1116  nano mysql-pv.yaml 
+ 1117  kubectl mysql-pv.yaml 
+ 1118  kubectl apply -f mysql-pv.yaml 
+ 1119  ls
+ 1120  kubectl -k ./
+ 1121  kubectl apply -k ./
+ 1122  kubectl get pv
+ 1123  kubectl describe pv mysql-pv
+ 1124  kubectl get pvc
+ 1125  kubectl describe pvc mysql-pv-claim
+ 1126  nano ../jenkins/jenkins-latest-chart.yaml 
+ 1127  nano mysql-deployment.yaml 
+ 1128  kubectl apply -k ./
+ 1129  kubectl apply -k ./ --validate=false
+ 1130  nano mysql-deployment.yaml 
+ 1131  kubectl apply -k ./
+ 1132  kubectl delete -k ./
+ 1133  kubectl apply -k ./
+ 1134  kubectl get pvc
+ 1135  kubectl top node
+ 1136  kubectl get nodes -A
+ 1137  kubectl delete -k ./
+ 1138  ls
+ 1139  cp mysql-pv.yaml wp-pv.yaml
+ 1140  mkdir /data/wp-data/
+ 1141  nano wp-pv.yaml 
+ 1142  kubectl apply -f wp-pv.yaml 
+ 1143  kubectl get pv
+ 1144  nano wordpress-deployment.yaml 
+ 1145  nano mysql-deployment.yaml 
+ 1146  nano wordpress-deployment.yaml 
+ 1147  kubectl get pv
+ 1148  nano wordpress-deployment.yaml 
+ 1149  nano mysql-deployment.yaml 
+ 1150  kubectl apply -k ./
+ 1151  kubectl get pv
+ 1152  kubectl get pvc
+ 1153  kubectl get svc
+ 1154  kubectl edit svc wordpress
+ 1155  kubectl get ingress
+ 1156  kubectl edit ingress nginx-test
+ 1157  kubectl get ingress
+ 1158  kubectl describe ingress nginx-test
+ 1159  kubectl get pods -A
+ 1160  kubectl describe pod wordpress-5bbd7fd785-9p5kx
+ 1161  kubectl describe secret directoryx-admin-token-5p8nm -n kube-system
+ 1162  kubectl get pods -A
+ 1163  exit
+ 1164  kubectl get pods -A
+ 1165  ls -al 
+ 1166  cd /data/
+ 1167  ls -al wp-data/
+ 1168  ls -al mysql-volume/
+ 1169  kubectl get pods -A
+ 1170  kubectl describe pod wordpress-mysql-85ff59475f-m9bj2
+ 1171  exit
+ 1172  kubectl get pods -A
+ 1173  kubectl get ingress -A
+ 1174  kubectl describe ingress nginx-test
+ 1175  kubectl get pods -A
+ 1176  kubectl describe pods wordpress-5bbd7fd785-9p5kx
+ 1177  ls - al /data/wp-data/
+ 1178  ls -al /data/wp-data/
+ 1179  ls -al /data/mysql-volume/
+ 1180  kubectl logs wordpress-5bbd7fd785-9p5kx
+ 1181  kubectl get pods -A
+ 1182  kubectl logs ordpress-mysql-85ff59475f-m9bj2
+ 1183  kubectl logs wordpress-mysql-85ff59475f-m9bj2
+ 1184  kubectl get svc -A
+ 1185  ls
+ 1186  cd mysql-wp/
+ 1187  kubectl delete -k ./
+ 1188  kubectl apply -k ./
+ 1189  history | grep "secret"
+ 1190  kubectl describe secret directoryx-admin-token-5p8nm -n kube-system
+ 1191  ls
+ 1192  kubectl apply -f mysql-pv.yaml 
+ 1193  kubectl apply -f wp-pv.yaml 
+ 1194  cd ../
+ 1195  mkdir hpa-test
+ 1196  cd hpa-test/
+ 1197  nano Dockerfile
+ 1198  nano index.php
+ 1199  nano hpa-test.yaml
+ 1200  kubectl apply -f hpa-test.yaml 
+ 1201  kubectl get svc -A
+ 1202  kubectl autoscale deployment php-apache --cpu-percent=50 --min=1 --max=10
+ 1203  kubectl get hpa
+ 1204  kubectl get deployment
+ 1205  kubectl get pods -A
+ 1206  kubectl run -it --rm load-generator --image=busybox /bin/sh
+ 1207  exit
+ 1208  kubectl get pods
+ 1209  kubectl get hpa
+ 1210  kubectl describe hpa php-apache
+ 1211  kubectl delete hpa php-apache
+ 1212  kubectl describe hpa php-apache
+ 1213  kubectl get pods
+ 1214  kubectl top pods
+ 1215  kubectl autoscale deployment php-apache --cpu-percent=80 --min=1 --max=5
+ 1216  kubectl get hpa
+ 1217  kubectl get pods -A
+ 1218  kubectl logs my-release-metrics-metrics-server-8694db558-px4k
+ 1219  kubectl logs my-release-metrics-metrics-server-8694db558-px4kl
+ 1220  cd mysql-wp/
+ 1221  kubectl delete -k ./
+ 1222  kubectl logs my-release-metrics-metrics-server-8694db558-px4kl
+ 1223  kubectl top node
+ 1224  kubectl get hpa
+ 1225  kubectl get pods -A
+ 1226  kubectl get hpa
+ 1227  kubectl get pods -A
+ 1228  kubectl get svc -A
+ 1229  exit
+ 1230  kubectl get pods -A
+ 1231  kubectl get hpa
+ 1232  kubectl logs kubernetes-dashboard-7f99b75bf4-qjwgl
+ 1233  kubectl logs kubernetes-dashboard-7f99b75bf4-qjwgl -n kubernetes-dashboard
+ 1234  kubectl logs dashboard-metrics-scraper-6b4884c9d5-zrzxk -n kubernetes-dashboard
+ 1235  ls
+ 1236  cd hpa-test/
+ 1237  ls
+ 1238  kubectl delete -f hpa-test.yaml 
+ 1239  kubectl get hpa
+ 1240  kubectl delete hpa php-apache
+ 1241  kubectl logs dashboard-metrics-scraper-6b4884c9d5-zrzxk -n kubernetes-dashboard
+ 1242  kubectl logs kubernetes-dashboard-7f99b75bf4-qjwgl -n kubernetes-dashboard
+ 1243  kubectl get svc -A -o wide
+ 1244  kubectl describe svc dashboard-metrics-scraper 
+ 1245  kubectl describe svc dashboard-metrics-scraper  -n kubernetes-dashboard
+ 1246  kubectl get node
+ 1247  kubectl describe svc dashboard-metrics-scraper  -n kubernetes-dashboard
+ 1248  exit
+ 1249  kubectl get svc -A
+ 1250  kubectl describe svc dashboard-metrics-scraper -n kubernetes-dashboard
+ 1251  kubectl describe node kworker2
+ 1252  kubectl top node
+ 1253  cd hpa-test/
+ 1254  ls
+ 1255  kubectl apply -f hpa-test.yaml 
+ 1256  history 
+ 1257  kubectl autoscale deployment php-apache --cpu-percent=80 --min=1 --max=5
+ 1258  kubectl edit ingress nginx-test
+ 1259  kubectl get pods -A
+ 1260  kubectl get svc -A
+ 1261  kubectl describe ingress nginx-test
+ 1262  kubectl get hpa
+ 1263  kubectl get deployment -A -o wide
+ 1264  kubectl get hpa -o wide
+ 1265  ab
+ 1266  kubectl get hpa -o wide
+ 1267  kubectl run -it --rm load-generator --image=busybox /bin/sh
+ 1268  kubectl get hpa -o wide
+ 1269  kubectl top pod
+ 1270  kubectl get hpa -o wide
+ 1271  kubectl get deployment
+ 1272  kubectl describe deployment php-apache
+ 1273  kubectl get hpa -o wide
+ 1274  kubectl get pods
+ 1275  kubectl get pods -o wide
+ 1276  kubectl get hpa -o wide
+ 1277  kubectl get pods -o wide
+ 1278  kubectl top pods
+ 1279  kubectl get hpa -o wide
+ 1280  kubectl top node
+ 1281  helm install stable/prometheus-operator --generate-name
+ 1282  kubectl --namespace default get pods -l "release=prometheus-operator-1598013358"
+ 1283  kubectl get hpa -o wide
+ 1284  kubectl get pods
+ 1285  kubectl describe pods prometheus-prometheus-operator-159801-prometheus-0
+ 1286  prometheus-operator-1598013358-grafana-65b9546666-wpfm4
+ 1287  kubectl describe pods prometheus-operator-1598013358-grafana-65b9546666-wpfm4
+ 1288  kubectl get svc
+ 1289  kubectl edit svc prometheus-operator-158518-prometheus
+ 1290  kubectl edit svc prometheus-operator-159801-prometheus
+ 1291  kubectl edit ingress nginx-test
+ 1292  kubectl get svc
+ 1293  kubectl edit ingress nginx-test
+ 1294  kubectl get secret prometheus-operator-1585188007-grafana -o jsonpath=”{.data.admin-password}” | base64 --decode ; echo
+ 1295  kubectl get secret prometheus-operator-1598013358-grafana -o jsonpath=”{.data.admin-password}” | base64 --decode ; echo
+ 1296  kubectl get secret prometheus-operator-1598013358-grafana -o jsonpath="{.data.admin-password}" | base64 --decode ; echo
+ 1297  kubectl get svc
+ 1298  kubectl top node
+ 1299  kubectl top pods
+ 1300  kubectl get pods
+ 1301  kubectl get svc
+ 1302  kubectl apply -f https://k8s.io/examples/admin/dns/dnsutils.yaml
+ 1303  kubectl get pods dnsutils
+ 1304  kubectl exec -i -t dnsutils -- nslookup kubernetes.default
+ 1305  kubectl get svc -A
+ 1306  kubectl get configmap
+ 1307  kubectl get configmap -A
+ 1308  kubectl edit configmap coredns -n kube-system
+ 1309  kubectl exec -i -t dnsutils -- nslookup kubernetes.default
+ 1310  exit
+ 1311  kubectl get pods -A
+ 1312  kubectl get svc -A
+ 1313  kubectl exec -i -t dnsutils -- nslookup kubernetes.default
+ 1314  kubectl exec -ti dnsutils -- cat /etc/resolv.conf
+ 1315  kubectl exec -i -t dnsutils -- nslookup google.com
+ 1316  kubectl logs --namespace=kube-system $(kubectl get pods --namespace=kube-system -l k8s-app=kube-dns -o name) -c kubedns
+ 1317  kubectl get pods -A
+ 1318  kubectl logs coredns-66bff467f8-7c9dq -n kube-system
+ 1319  kubectl get pods -A
+ 1320  kubectl logs coredns-66bff467f8-7c9dq -n kube-system
+ 1321  -n kube-system describe deployment coredns'
+ 1322  kubectl -n kube-system describe deployment coredns
+ 1323  kubectl apply -f https://docs.projectcalico.org/v3.0/getting-started/kubernetes/installation/hosted/kubeadm/1.7/calico.yaml
+ 1324  kubectl delete -f https://docs.projectcalico.org/v3.0/getting-started/kubernetes/installation/hosted/kubeadm/1.7/calico.yaml
+ 1325  update-alternatives --set iptables /usr/sbin/iptables-legacy
+ 1326  sudo iptables -P FORWARD ACCEPT
+ 1327  kubectl get pods -A
+ 1328  kubectl exec -i -t dnsutils -- nslookup google.com
+ 1329  sudo iptables -S
+ 1330  sudo apt-get install curl ebtables ethtool gpg gpg-agent
+ 1331  apt-get install curl ebtables ethtool gpg gpg-agent
+ 1332  tcpdump -i any -vvv -n host 192.168.0.6
+ 1333  sudo tcpdump -i any -vvv -n host 192.168.0.6
+ 1334  ip route
+ 1335  kubectl get pods -A
+ 1336  kubectl get svc -A
+ 1337  ip rule
+ 1338  kubectl get endpoints kubernetes
+ 1339  curl https://10.96.0.1:6443/version
+ 1340  ufw status
+ 1341  sudo ufw status
+ 1342  kubectl get pods -A
+ 1343  kubectl logs coredns-66bff467f8-8ts8m -n kube-system
+ 1344  kubectl logs coredns-66bff467f8-7c9dq
+ 1345  kubectl logs coredns-66bff467f8-7c9dq -n kube-system
+ 1346  kubectl logs calico-kube-controllers-5fbfc9dfb6-jgl28 -n kube-system
+ 1347  time
+ 1348  date
+ 1349  kubectl edit calico-kube-controllers-5fbfc9dfb6-jgl28 -n kube-system
+ 1350  kubectl edit pods calico-kube-controllers-5fbfc9dfb6-jgl28 -n kube-system
+ 1351  kubectl get secret -A
+ 1352  kubectl edit pods calico-kube-controllers-5fbfc9dfb6-jgl28 -n kube-system
+ 1353  echo 1 > /proc/sys/net/ipv4/conf/all/rp_filter
+ 1354  sudo echo 1 > /proc/sys/net/ipv4/conf/all/rp_filter
+ 1355  kubectl get clusterrole calico-node
+ 1356  kubectl describe pod calico-kube-controller
+ 1357  kubectl get pods
+ 1358  kubectl get pods -a
+ 1359  kubectl get pods -A
+ 1360  kubectl describe pods calico-kube-controllers-5fbfc9dfb6-jgl28
+ 1361  kubectl describe pods calico-kube-controllers-5fbfc9dfb6-jgl28 -n kube-system
+ 1362  kubectl edit pods calico-kube-controllers-5fbfc9dfb6-jgl28 -n kube-system
+ 1363  kubectl get secret -A
+ 1364  kubectl edit pods calico-kube-controllers-5fbfc9dfb6-jgl28 -n kube-system
+ 1365  kubectl describe pods calico-kube-controllers-5fbfc9dfb6-jgl28 -n kube-system
+ 1366  kubectl get secret -A
+ 1367  kubectl describe secret calico-kube-controllers-token-7pqhf -n kube-system
+ 1368  kubectl get secret -A | grep "calico-kube-controllers-token-7pqhf"
+ 1369  kubectl get cr
+ 1370  kubectl get clusterrole
+ 1371  exit
+ 1372  kubectl create -f https://docs.projectcalico.org/v3.9/manifests/calico.yaml
+ 1373  kubectl delete -f kubectl create -f https://docs.projectcalico.org/v3.9/manifests/calico.yam
+ 1374  kubectl delete -f https://docs.projectcalico.org/v3.9/manifests/calico.yaml
+ 1375  kubectl apply -f https://docs.projectcalico.org/v3.9/manifests/calico.yaml
+ 1376  kubectl get pods -A
+ 1377  exit
+ 1378  kubectl get pods -A
+ 1379  kubectl exec -i -t dnsutils -- nslookup google.com
+ 1380  kubectl get pods
+ 1381  kubectl get pods -A
+ 1382  kubectl logs calico-kube-controllers-5fbfc9dfb6-g8s7x -n kube-system
+ 1383  kubectl logs calico-node-5m9tq
+ 1384  kubectl logs calico-node-5m9tq -n kube-system
+ 1385  kubectl get pods -A
+ 1386  kubectl get node
+ 1387  kubectl top node
+ 1388  kubectl -n kube-system logs oredns-66bff467f8-7c9dq
+ 1389  kubectl -n kube-system
+ 1390  kubectl -n kube-system oredns-66bff467f8-7c9dq
+ 1391  kubectl -n kube-system coredns-66bff467f8-7c9dq
+ 1392  kubectl get pods -A
+ 1393  kubectl logs oredns-66bff467f8-7c9dq
+ 1394  kubectl logs coredns-66bff467f8-7c9dq -n kube-system
+ 1395  kubectl logs coredns-66bff467f8-8ts8m -n kube-system
+ 1396  kubectl describe coredns-66bff467f8-8ts8m 
+ 1397  kubectl describe coredns-66bff467f8-8ts8m
+ 1398  kubectl describe pods coredns-66bff467f8-8ts8m
+ 1399  kubectl describe pods coredns-66bff467f8-8ts8m -n kube-system
+ 1400  kubectl get pods -A
+ 1401  kubectl describe pods alertmanager-prometheus-operator-159801-alertmanager-0
+ 1402  ls
+ 1403  history
+ 1404  history > history.txt 
+  603  systemctl status kube-apiserver -l
+  604  kube-apiserver
+  605  cd /etc/kubernetes/manifests/
+  606  nano kube-apiserver.yaml 
+  607  sudo su
+  608  exit
+  609  kubectl cluster-info
+  610  kubectl cluster-info dump
+  611  systemctl status kubelet
+  612  sudo nano /etc/kubernetes/manifests/kube-apiserver.yaml 
+  613  sudo systemctl restart kubelet
+  614  systemctl status kubelet
+  615  kubectl cluster-info
+  616  kubectl top node
+  617  sudo nano /etc/kubernetes/manifests/kube-apiserver.yaml 
+  618  kubectl get apiservices |egrep metrics
+  619  kubectl get deploy,svc -n kube-system |egrep metrics-server
+  620  kubectl get apiservice v1beta1.metrics.k8s.io -o yaml
+  621  kubectl version
+  622  kubectl logs metrics-server-584b5f4754-9lwjf -n kube-system
+  623  kubectl logs dashboard-metrics-scraper-6b4884c9d5-fxt54 -n kubernetes-dashboard
+  624  kubectl top node
+  625  sudo su
+  626  kubectl get apiservice
+  627  kubectl describe kubectl get --raw /apis/metrics.k8s.io/v1beta1
+  628  kubectl get --raw /apis/metrics.k8s.io/v1beta1
+  629  kubectl describe apiservice v1beta1.metrics.k8s.io
+  630  kubectl get pods -n kube-system
+  631  kubectl logs metrics-server-584b5f4754-9lwjf -n kube-system
+  632  kubectl get svc -A
+  633  ls
+  634  cd metrics-server/
+  635  ls
+  636  nano components.yaml 
+  637  kubectl apply -f components.yaml 
+  638  kubectl logs metrics-server-584b5f4754-9lwjf -n kube-system
+  639  kubectl get svc -A
+  640  kubectl top node
+  641  kubectl get pods -A
+  642  kubectl logs  metrics-server-64fc878566-2j8f9 -n kube-system
+  643  nano components.yaml 
+  644  kubectl apply -f components.yaml 
+  645  kubectl get pods -A
+  646  kubectl logs  metrics-server-584b5f4754-lfz4m  -n kube-system
+  647  kubectl get --raw /api/v1/namespaces/kube-system/services/https:metrics-server:443/proxy
+  648  kubectl get --raw /api/v1/namespaces/kube-system/services/https:metrics-server:4443/proxy
+  649  kubectl get --raw /api/v1/namespaces/kube-system/services/https:metrics-server:443/proxy
+  650  kubectl delete -f components.yaml 
+  651  helm repo add bitnami https://charts.bitnami.com/bitnami
+  652  helm install my-release-metrics bitnami/metrics-server
+  653  helm delete my-release-metrics
+  654  helm install my-release-metrics --set apiService.create=true rbac.create=true bitnami/metrics-server
+  655  helm install my-release-metrics \  --set apiService.create=true rbac.create=true bitnami/metrics-server
+  656  helm install my-release-metrics \  --set apiService.create=true --set rbac.create=true bitnami/metrics-server
+  657  helm install my-release-metrics \  --set apiService.create=true --set rbac.create=true \  bitnami/metrics-server
+  658  helm install my-release-metrics   --set rbac.create=true --set apiService.create=true bitnami/metrics-server
+  659  kubectl get --raw "/apis/metrics.k8s.io/v1beta1/nodes"
+  660  kubectl get nodes -A
+  661  kubectl get pods -A
+  662  kubectl describe pods my-release-metrics-metrics-server-6cb6d8df65-fq6l5
+  663  kubectl get pods -A
+  664  kubectl get --raw "/apis/metrics.k8s.io/v1beta1/nodes"
+  665  kubectl logs my-release-metrics-metrics-server-6cb6d8df65-fq6l5
+  666  kubectl get apiservice
+  667  kubectl get svc -A
+  668  kubectl describe apiservice v1beta1.metrics.k8s.io
+  669  kubectl get deployment -A
+  670  kubectl edit deployment my-release-metrics-metrics-server
+  671  kubectl get deployment -A
+  672  kubectl describe deployment my-release-metrics-metrics-server
+  673  kubectl get --raw "/apis/metrics.k8s.io/v1beta1/nodes"
+  674  kubectl top node
+  675  kubectl edit deployment my-release-metrics-metrics-server
+  676  kubectl top node
+  677  kubectl get pods -A
+  678  kubectl logs my-release-metrics-metrics-server-566788c4f-d8j4r
+  679  kubectl get pods -A
+  680  my-release-metrics-metrics-server-5c848c856b-62qk2
+  681  kubectl describe pods my-release-metrics-metrics-server-5c848c856b-62qk2
+  682  kubectl get pods -A -o wide
+  683  kubectl logs my-release-metrics-metrics-server-566788c4f-d8j4r
+  684  my-release-metrics-metrics-server-5c848c856b-62qk2ku
+  685  kubectl logs my-release-metrics-metrics-server-566788c4f-d8j4r
+  686  kubectl edit deployment my-release-metrics-metrics-server
+  687  kubectl logs my-release-metrics-metrics-server-566788c4f-d8j4r
+  688  history
+  689  ubectl get --raw "/apis/metrics.k8s.io/v1beta1/nodes"
+  690  kubectl get --raw "/apis/metrics.k8s.io/v1beta1/nodes"
+  691  kubectl top node
+  692  kubectl logs my-release-metrics-metrics-server-566788c4f-d8j4r
+  693  exit
+  694  kubectl logs my-release-metrics-metrics-server-566788c4f-d8j4r
+  695  kubectl top node
+  696  kubectl get --raw "/apis/metrics.k8s.io/v1beta1/nodes"
+  697  kubectl top node
+  698  kubectl logs my-release-metrics-metrics-server-566788c4f-d8j4r
+  699  ping kmaster
+  700  ping kworker1
+  701  kubectl get deployment
+  702  kubectl edit deployment my-release-metrics-metrics-server
+  703  kubectl get deployment
+  704  kubectl logs my-release-metrics-metrics-server-566788c4f-d8j4r
+  705  kubectl top node
+  706  kubectl logs my-release-metrics-metrics-server-566788c4f-d8j4r
+  707  kubectl get nodes -o wide
+  708  exit
+  709  kubectl top node
+  710  kubectl logs my-release-metrics-metrics-server-566788c4f-d8j4r
+  711  kubectl top node
+  712  kubectl get --raw "/apis/metrics.k8s.io/v1beta1/nodes"
+  713  kubectl top node
+  714  kubectl logs my-release-metrics-metrics-server-566788c4f-d8j4r
+  715  kubectl edit deployment my-release-metrics-metrics-server
+  716  kubectl logs my-release-metrics-metrics-server-566788c4f-d8j4r
+  717  curl https://kworker1:10250/stats/summary?only_cpu_and_memory=true
+  718  curl https://kworker1:10250/stats/summary?only_cpu_and_memory=true --ignore
+  719  curl https://kworker1:10250/stats/summary?only_cpu_and_memory=true --insecure
+  720  kubectl logs my-release-metrics-metrics-server-566788c4f-d8j4r
+  721  helm upgrade metrics-server stable/metrics-server --set "args[0]=--kubelet-preferred-address-types=InternalIP"
+  722  '
+  723  kubectl get deployment
+  724  kubelet edit deploy my-release-metrics-metrics-server
+  725  kubelet edit deployent my-release-metrics-metrics-server
+  726  kubelet edit deployment my-release-metrics-metrics-server
+  727  history
+  728  kubectl edit deployment my-release-metrics-metrics-server
+  729  kubectl logs my-release-metrics-metrics-server-566788c4f-d8j4r
+  730  kubectl get pods -A
+  731  kubectl logs kubernetes-dashboard-7f99b75bf4-2jpfh -n kubernetes-dashboard
+  732  kubectl top pod
+  733  kubectl top pods
+  734  kubectl top node
+  735  kubectl logs kubernetes-dashboard-7f99b75bf4-2jpfh -n kubernetes-dashboard
+  736  kubectl get pods 
+  737  kubectl get pods -A
+  738  kubectl describe pods dashboard-metrics-scraper-6b4884c9d5-fxt54 -n kubernetes-dashboard
+  739  kubectl logs dashboard-metrics-scraper-6b4884c9d5-fxt54
+  740  kubectl get pods -A
+  741  kubectl logs dashboard-metrics-scraper-6b4884c9d5-fxt54
+  742  kubectl logs dashboard-metrics-scraper-6b4884c9d5-fxt54 -n kubernetes-dashboard
+  743  sudo apt install htop
+  744  htop
+  745  kubectl top node
+  746  curl https://kworker1:10250/stats/summary?only_cpu_and_memory=true --ignore
+  747  kubectl logs my-release-metrics-metrics-server-566788c4f-d8j4r
+  748  kubectl top works
+  749  kubelet edit deployent my-release-metrics-metrics-server
+  750  kubectl edit deployment my-release-metrics-metrics-server
+  751  kubectl logs my-release-metrics-metrics-server-566788c4f-d8j4r
+  752  kubectl edit deployment my-release-metrics-metrics-server
+  753  kubectl logs my-release-metrics-metrics-server-566788c4f-d8j4r
+  754  kubectl -nkube-system create configmap front-proxy-ca --from-file=front-proxy-ca.crt=/etc/kubernetes/pki/front-proxy-ca.crt -o yaml | kubectl -nkube-system replace configmap front-proxy-ca -f -
+  755  exit
+  756  kubectl top node
+  757  kubectl get pods -A
+  758  kubectl describe pod apple-app
+  759  kubectl get pods -A
+  760  kubectl get pods
+  761  kubectl top node
+  762  kubectl top pods
+  763  docker images
+  764  kubectl describe apple-app
+  765  kubectl describe pod apple-app
+  766  docker pull https://github.com/wardviaene/jenkins-course
+  767  docker pull hashicorp/http-echo
+  768  docker images
+  769  kubectl get pods -A
+  770  docker images
+  771  kubectl describe pod banana-app
+  772  kubectl get pods -A
+  773  kubectl describe pods default-http-backend
+  774  kubectl get pods -A
+  775  kubectl describe pods default-http-backend-7967b9764b-7fgw2
+  776  docker pull gcr.io/google_containers/defaultbackend:1.3
+  777  kubectl get pods -A
+  778  kubectl describe pods my-release-metrics-metrics-server-54659c4685-6hcbk
+  779  docker pull docker.io/bitnami/metrics-server:0.3.7-debian-10-r89
+  780  kubectl get pods -A
+  781  kubectl describe pods my-release-metrics-metrics-server-566788c4f-d8j4r
+  782  kubectl get pods -A
+  783  kubectl describe pods ingress-nginx-admission-create-nv7nx
+  784  kubectl describe pods ingress-nginx-admission-patch-dxkwj
+  785  kubectl describe pods ingress-nginx-controller-7fd7d8df56-mtb4h
+  786  kubectl describe pods ingress-nginx-admission-create-nv7nx -n ingress-nginx
+  787  docker pull docker.io/jettech/kube-webhook-certgen:v1.2.2
+  788  kubectl describe pods ingress-nginx-admission-patch-dxkwj -n ingress-nginx
+  789  kubectl describe pods ingress-nginx-controller-7fd7d8df56-mtb4h -ingress-nginx
+  790  kubectl describe pods ingress-nginx-controller-7fd7d8df56-mtb4h -n ingress-nginx
+  791  docker pull us.gcr.io/k8s-artifacts-prod/ingress-nginx/controller:v0.34.1@sha256:0e072dddd1f7f8fc8909a2ca6f65e76c5f0d2fcfb8be47935ae3457e8bbceb20
+  792  exit
+  793  kubect get node
+  794  kubectl get node
+  795  kubectl describe node kworker2
+  796  kubectl get node
+  797  kubectl describe node kworker2
+  798  kubectl get node
+  799  kubectl describe node kworker2
+  800  kubectl get node
+  801  kubectl describe node kworker2
+  802  kubectl top node
+  803  kubectl get pods -A
+  804  kubectl describe pods my-release-metrics-metrics-server-54659c4685-6hcbk 
+  805  kubectl get pods -A
+  806  kubectl describe pods speaker-zvzpc
+  807  kubectl describe pods speaker-zvzpc -n metallb-system
+  808  kubectl get pods -A
+  809  kubectl describe pods my-release-metrics-metrics-server-566788c4f-d8j4
+  810  kubectl edit pods my-release-metrics-metrics-server-566788c4f-d8j4
+  811  kubectl edit pods my-release-metrics-metrics-server-566788c4f-d8j4 
+  812  kubectl get pods -A
+  813  kubectl edit pods my-release-metrics-metrics-server-566788c4f-d8j4r
+  814  kubectl get svc -A
+  815  kubectl edit svc my-release-metrics-metrics-server
+  816  kubectl get pods -A
+  817  kubectl logs my-release-metrics-metrics-server-566788c4f-d8j4r
+  818  ls
+  819  cd metrics-server/
+  820  ls
+  821  nano components.yaml 
+  822  kubectl apply -f components.yaml 
+  823  kubectl delete -f components.yaml 
+  824  nano components.yaml 
+  825  kubectl edit svc my-release-metrics-metrics-server
+  826  kubectl edit pods my-release-metrics-metrics-server-566788c4f-d8j4r
+  827  kubectl get pods -A
+  828  helm uninstall my-release-metrics-metrics-server
+  829  helm release
+  830  helm --help
+  831  helm status
+  832  helm status my-release-metrics-metrics-server
+  833  helm list
+  834  helm uninstall my-release-metrics
+  835  kubectl get pods -A
+  836  ls
+  837  nano components.yaml 
+  838  kubectl apply -f components.yaml 
+  839  kubectl get pods -A
+  840  kubectl describe metrics-server-68cddbd44b-gfnnk -n kube-system
+  841  kubectl describe pods metrics-server-68cddbd44b-gfnnk -n kube-system
+  842  kubectl get pods -A
+  843  calico-node-5swqs
+  844  kubectl describe pods calico-node-5swqs
+  845  kubectl describe pods calico-node-5swqs -n kube-system
+  846  kubectl get pods -A -o wide
+  847  kubectl describe pods calico-node-5swqs -n kube-system - 
+  848  kubectl describe pods calico-node-5swqs -n kube-system 
+  849  kubectl get pods -A -o wide
+  850  kubectl describe pods metrics-server-68cddbd44b-gfnnk
+  851  kubectl describe pods metrics-server-68cddbd44b-gfnnk -n kube-system
+  852  kubectl get pods -A -o wide
+  853  kubectl describe pods metrics-server-68cddbd44b-gfnnk -n kube-system
+  854  kubectl get pods -A -o wide
+  855  kubectl describe pods metrics-server-68cddbd44b-gfnnk -n kube-system
+  856  kubectl logs metrics-server-68cddbd44b-gfnnk -n kube-system
+  857  kubectl edit pods metrics-server-68cddbd44b-gfnnk -n kube-system
+  858  nano components.yaml 
+  859  kubectl apply -f components.yaml 
+  860  kubectl edit pods metrics-server-68cddbd44b-gfnnk -n kube-system
+  861  kubectl get pods -A -o wide
+  862  kubectl logs metrics-server-5bdf6469cc-dmxmw -n kube-system
+  863  kubectl top node
+  864  kubectl logs metrics-server-5bdf6469cc-dmxmw -n kube-system
+  865  nano components.yaml 
+  866  kubectl apply -f components.yaml 
+  867  kubectl get pods -A -o wide
+  868  kubectl delete -f components.yaml 
+  869  history | grep helm
+  870  helm install my-release-metrics \  --set apiService.create=true --set rbac.create=true \  bitnami/metrics-server
+  871  helm install my-release-metrics   --set rbac.create=true --set apiService.create=true bitnami/metrics-server
+  872  kubectl get pods -A -o wide
+  873  kubectl edit pods my-release-metrics-metrics-server-6cb6d8df65-pjv74 
+  874  helm install my-release-metrics   --set rbac.create=true --set apiService.create=true --set extraArgs={}  bitnami/metrics-server
+  875  helm install my-release-metrics   --set rbac.create=true --set apiService.create=true --set extraArgs={--kubelet-preferred-address-types=InternalDNS,InternalIP,ExternalDNS,ExternalIP,Hostname,--kubelet-insecure-tls}  bitnami/metrics-server
+  876  helm uninstall my-release-metrics
+  877  helm install my-release-metrics   --set rbac.create=true --set apiService.create=true --set extraArgs={--kubelet-preferred-address-types=InternalDNS,InternalIP,ExternalDNS,ExternalIP,Hostname,--kubelet-insecure-tls}  bitnami/metrics-server
+  878  helm fetch bitnami/metrics-server --untar
+  879  ls
+  880  cd metrics-server/
+  881  ls
+  882  nano values.yaml 
+  883  kubectl uninstall my-release-metrics
+  884  helm uninstall my-release-metrics
+  885  helm uninstall my-release-metric
+  886  helm list
+  887  helm install my-release-metrics   --set rbac.create=true --set apiService.create=true -f values.yaml  bitnami/metrics-server
+  888  kubectl get pods -A
+  889  kubectl describe pods my-release-metrics-metrics-server-69485bdb46-djl9x 
+  890  kubectl logs my-release-metrics-metrics-server-69485bdb46-djl9x 
+  891  kubectl top node
+  892  kubectl get pods -A
+  893  kubectl logs dashboard-metrics-scraper-6b4884c9d5-fxt54 -n kubernetes-dashboard
+  894  nano values.yaml 
+  895  helm uninstall my-release-metrics
+  896  helm install my-release-metrics   --set rbac.create=true --set apiService.create=true -f values.yaml  bitnami/metrics-server
+  897  kubectl get --raw "/apis/metrics.k8s.io/v1beta1/nodes"
+  898  helm install my-release-metrics -f values.yaml  bitnami/metrics-server
+  899  kubectl get pods -A
+  900  kubectl get apiservice
+  901  kubectl describe apiserver v1beta1.metrics.k8s.io
+  902  kubectl describe apiservice v1beta1.metrics.k8s.io
+  903  helm uninstall my-release-metrics
+  904  helm install my-release-metrics -f values.yaml  bitnami/metrics-server
+  905  nano values.yaml 
+  906  kubectl get --raw "/apis/metrics.k8s.io/v1beta1/nodes"
+  907  ls
+  908  kubectl get pods -A -o wide
+  909  kubectl get svc -A -o wide
+  910  curl 10.96.73.192:443
+  911  curl 10.104.109.121:8080
+  912  kubectl get --raw "/apis/metrics.k8s.io/v1beta1/nodes"
+  913  kubectl get pods -A
+  914  kubectl logs my-release-metrics-metrics-server-69485bdb46-dhxjk
+  915  kubectl get svc -A
+  916  kubectl edit svc my-release-metrics-metrics-server 
+  917  kubectl get svc -A
+  918  kubectl get --raw "/apis/metrics.k8s.io/v1beta1/nodes"
+  919  kubectl edit apiservice v1beta1.metrics.k8s.io
+  920  kubectl get --raw "/apis/metrics.k8s.io/v1beta1/nodes"
+  921  ping 10.109.196.199
+  922  curl 10.109.196.199
+  923  ls
+  924  cd ../
+  925  ls
+  926  nano components.yaml 
+  927  helm uninstall my-release-metrics
+  928  kubectl get --raw "/apis/metrics.k8s.io/v1beta1/nodes"
+  929  nano components.yaml 
+  930  kubectl apply -f components.yaml 
+  931  nano components.yaml 
+  932  kubectl delete -f components.yaml 
+  933  ls
+  934  cd metrics-server/
+  935  ls
+  936  nano values.yaml 
+  937  helm install my-release-metrics -f values.yaml  bitnami/metrics-server
+  938  kubectl get --raw "/apis/metrics.k8s.io/v1beta1/nodes"
+  939  kubectl top
+  940  kubectl top node
+  941  kubectl get pods -A
+  942  kubectl logs my-release-metrics-metrics-server-8694db558-jbwsb
+  943  nano values.yaml 
+  944  helm uninstall my-release-metrics
+  945  helm install my-release-metrics -f values.yaml  bitnami/metrics-server
+  946  kubectl edit configmap coredns -n kube-system
+  947  kubectl get nodes
+  948  kubectl top nodes
+  949  kubectl get --raw "/apis/metrics.k8s.io/v1beta1/nodes"
+  950  helm uninstall my-release-metrics
+  951  nano values.yaml 
+  952  helm install my-release-metrics -f values.yaml  bitnami/metrics-server
+  953  kubectl get --raw "/apis/metrics.k8s.io/v1beta1/nodes"
+  954  kubectl logs --follow 
+  955  kubectl get pods
+  956  kubectl logs --follow my-release-metrics-metrics-server-8694db558-px4kl
+  957  exit
+  958  kubectl get pods -A
+  959  kubectl logs my-release-metrics-metrics-server-8694db558-px4kl
+  960  kubectl get --raw "/apis/metrics.k8s.io/v1beta1/nodes"
+  961  kubectl logs my-release-metrics-metrics-server-8694db558-px4kl
+  962  kubectl logs dashboard-metrics-scraper-6b4884c9d5-fxt54
+  963  kubectl logs dashboard-metrics-scraper-6b4884c9d5-fxt54 -n kubernetes-dashboard
+  964  kubectl top node
+  965  kubectl top pods
+  966  kubectl get svc -A
+  967  kubect edit svc my-release-metrics-metrics-server
+  968  kubectl edit svc my-release-metrics-metrics-server
+  969  kubectl logs kubernetes-dashboard-7f99b75bf4-2jpfh -n kubernetes-dashboard
+  970  ls
+  971  cd kubernetes-dashboard/
+  972  ls
+  973  kubectl delete -f recommended.yaml 
+  974  helm install kubernetes-dashboard/kubernetes-dashboard --name my-release   --set=service.externalPort=8080,resources.limits.cpu=200m
+  975  helm repo add kubernetes-dashboard https://kubernetes.github.io/dashboard/
+  976  kubectl config get-contexts
+  977  helm install dashboard-demo stable/kubernetes-dashboard --set rbac.clusterAdminRole=true
+  978  export POD_NAME=$(kubectl get pods -n default -l "app=kubernetes-dashboard,release=dashboard-demo" -o jsonpath="{.items[0].metadata.name}")
+  979  echo $POD_NAME
+  980  kubectl get svc -A
+  981  kubectl get ingress
+  982  kubectl edit ingress nginx-test
+  983  kubectl get ingress
+  984  kubectl get pods
+  985  kubectl describe pods dashboard-demo-kubernetes-dashboard-588cbd9ffc-nj4r9
+  986  kubectl get pods
+  987  kubectl logs dashboard-demo-kubernetes-dashboard-588cbd9ffc-nj4r9 
+  988  helm uninstall dashboard-demo
+  989  ls
+  990  nano recommended.yaml 
+  991  rm recommended.yaml 
+  992  wget https://raw.githubusercontent.com/kubernetes/dashboard/v2.0.2/aio/deploy/recommended.yaml
+  993  nano recommended.yaml 
+  994  kubectl create namespace kubernetes-dashboard
+  995  kubectl get all -n kubernetes-dashboard
+  996  kubectl delete ns kubernetes-dashboard
+  997  kubectl create namespace kubernetes-dashboard
+  998  ls
+  999  cd ../
+ 1000  cd letsencrypt/
+ 1001  ls
+ 1002  cd live/directoryxx.com/
+ 1003  cp fullchain.pem ~/certs/dashboard.crt 
+ 1004  cp privkey.pem  ~/certs/dashboard.key 
+ 1005  cd ~/kubernetes-dashboard/
+ 1006  ls
+ 1007  cd ~/certs/
+ 1008  ls
+ 1009  kubectl create secret generic kubernetes-dashboard-certs --from-file=dashboard.key --from-file=dashboard.crt -n kubernetes-dashboard
+ 1010  cd ../kubernetes-dashboard/
+ 1011  kubectl apply -f recommended.yaml 
+ 1012  kubectl get pods -A
+ 1013  history
+ 1014  history | grep "tls.key"
+ 1015  kubectl update
+ 1016  kubectl edit
+ 1017  cd ../letsencrypt/live/directoryxx.com/
+ 1018  cp fullchain.pem ~/certs/tls.crt 
+ 1019  cp privkey.pem ~/certs/tls.key 
+ 1020  cd ~/certs/
+ 1021  kubectl edit secret tls test-tls --key="tls.key" --cert="tls.crt"
+ 1022  kubectl delete secret tls test-tls
+ 1023  kubectl get secret -A
+ 1024  kubectl delete secret tls test-tls -n jenkins
+ 1025  kubectl delete secret test-tls -n jenkins
+ 1026  kubectl get secret -A
+ 1027  history | grep "tls.key"
+ 1028  kubectl create secret tls test-tls --key="tls.key" --cert="tls.crt"
+ 1029  kubectl create secret tls test-tls --key="tls.key" --cert="tls.crt" -n jenkins
+ 1030  kubectl create secret tls test-tls --key="tls.key" --cert="tls.crt" -n kubernetes-dashboard
+ 1031  kubectl get pods -A
+ 1032  kubectl describe pods dashboard-metrics-scraper-6b4884c9d5-w82q4
+ 1033  kubectl describe pods dashboard-metrics-scraper-6b4884c9d5-w82q4 -n kubernetes-dashboard
+ 1034  exit
+ 1035  kubectl get pods -A
+ 1036  exit
+ 1037  kubectl get pods -A
+ 1038  kubectl describe pods jenkins-687c94f6bf-9ll2h -n jenkins
+ 1039  kubectl get svc -A
+ 1040  history | grep patch
+ 1041  kubectl get svc -A -o wide
+ 1042  history | grep patch 
+ 1043  kubectl patch svc kubernetes-dashboard -p '{"spec":{"externalIPs":["172.42.42.102"]}}' -n kubernetes-dashboard
+ 1044  history | grep patch 
+ 1045  kubectl get svc -A -o wide
+ 1046  kubectl describe pods kubernetes-dashboard -n kubernetes-dashboard
+ 1047  kubectl logs dashboard-metrics-scraper
+ 1048  kubectl logs dashboard-metrics-scraper -n kubernetes-dashboard
+ 1049  kubectl get pods -A
+ 1050  kubectl logs dashboard-metrics-scraper-6b4884c9d5-w82q4 -n kubernetes-dashboard
+ 1051  cd kubernetes-dashboard/
+ 1052  ls
+ 1053  kubectl delete -f recommended.yaml 
+ 1054  kubectl get pods -A
+ 1055  kubectl get svc
+ 1056  kubectl get svc -A
+ 1057  kubectl edit svc my-release-metrics-metrics-server
+ 1058  history
+ 1059  kubectl get --raw "/apis/metrics.k8s.io/v1beta1/nodes"
+ 1060  kubectl apply -f https://raw.githubusercontent.com/kubernetes/dashboard/v2.0.3/aio/deploy/recommended.yaml
+ 1061  kubectl get pods -A
+ 1062  kubectl get svc -A
+ 1063  kubectl edit svc kubernetes-dashboard -n kubernetes-dashboard
+ 1064  kubectl get svc -A
+ 1065  kubectl get pods -A
+ 1066  kubectl proxy --help
+ 1067  kubectl get secrets -A
+ 1068  kubectl describe secret  directoryx-admin-token-5p8nm -n kube-system
+ 1069  exut
+ 1070  exit
+ 1071  history > history.txt
+ 1072  ls
+ 1073  mkdir mysql-wp
+ 1074  cd mysql-wp/
+ 1075  cat <<EOF >./kustomization.yaml
+ 1076  secretGenerator:
+ 1077  - name: mysql-pass
+ 1078    literals:
+ 1079    - password=YOUR_PASSWORD
+ 1080  EOF
+ 1081  cat kustomization.yaml 
+ 1082  nano mysql-deployment.yaml
+ 1083  kubectl apply -f mysql-deployment.yaml 
+ 1084  curl -LO https://k8s.io/examples/application/wordpress/wordpress-deployment.yaml
+ 1085  cat <<EOF >>./kustomization.yaml
+ 1086  resources:
+ 1087    - mysql-deployment.yaml
+ 1088    - wordpress-deployment.yaml
+ 1089  EOF
+ 1090  nano kustomization.yaml 
+ 1091  kubectl apply -k ./
+ 1092  kubectl get secrets
+ 1093  kubectl get pvc
+ 1094  kubectl get pods
+ 1095  kubectl get services wordpress
+ 1096  kubectl edit svc wordpress
+ 1097  kubectl get services wordpress
+ 1098  kubectl get pods -A 
+ 1099  kubectl describe pods wordpress-5bbd7fd785-d7wms
+ 1100  mkdir /data/mysql-volume
+ 1101  ls
+ 1102  nano mysql-deployment.yaml 
+ 1103  ls
+ 1104  ls -al ../jenkins/
+ 1105  cp ../jenkins/jenkins-pv.yaml mysql-pv.yaml
+ 1106  nano mysql-
+ 1107  nano mysql-pv.yaml 
+ 1108  nano mysql-deployment.yaml 
+ 1109  cat mysql-pv.yaml 
+ 1110  nano ../jenkins/jenkins-latest-chart.yaml 
+ 1111  kubectl get secret -A
+ 1112  kubectl describe secret directoryx-admin-token-5p8nm -n kube-system
+ 1113  ls
+ 1114  kubectl delete -k ./
+ 1115  ls
+ 1116  nano mysql-pv.yaml 
+ 1117  kubectl mysql-pv.yaml 
+ 1118  kubectl apply -f mysql-pv.yaml 
+ 1119  ls
+ 1120  kubectl -k ./
+ 1121  kubectl apply -k ./
+ 1122  kubectl get pv
+ 1123  kubectl describe pv mysql-pv
+ 1124  kubectl get pvc
+ 1125  kubectl describe pvc mysql-pv-claim
+ 1126  nano ../jenkins/jenkins-latest-chart.yaml 
+ 1127  nano mysql-deployment.yaml 
+ 1128  kubectl apply -k ./
+ 1129  kubectl apply -k ./ --validate=false
+ 1130  nano mysql-deployment.yaml 
+ 1131  kubectl apply -k ./
+ 1132  kubectl delete -k ./
+ 1133  kubectl apply -k ./
+ 1134  kubectl get pvc
+ 1135  kubectl top node
+ 1136  kubectl get nodes -A
+ 1137  kubectl delete -k ./
+ 1138  ls
+ 1139  cp mysql-pv.yaml wp-pv.yaml
+ 1140  mkdir /data/wp-data/
+ 1141  nano wp-pv.yaml 
+ 1142  kubectl apply -f wp-pv.yaml 
+ 1143  kubectl get pv
+ 1144  nano wordpress-deployment.yaml 
+ 1145  nano mysql-deployment.yaml 
+ 1146  nano wordpress-deployment.yaml 
+ 1147  kubectl get pv
+ 1148  nano wordpress-deployment.yaml 
+ 1149  nano mysql-deployment.yaml 
+ 1150  kubectl apply -k ./
+ 1151  kubectl get pv
+ 1152  kubectl get pvc
+ 1153  kubectl get svc
+ 1154  kubectl edit svc wordpress
+ 1155  kubectl get ingress
+ 1156  kubectl edit ingress nginx-test
+ 1157  kubectl get ingress
+ 1158  kubectl describe ingress nginx-test
+ 1159  kubectl get pods -A
+ 1160  kubectl describe pod wordpress-5bbd7fd785-9p5kx
+ 1161  kubectl describe secret directoryx-admin-token-5p8nm -n kube-system
+ 1162  kubectl get pods -A
+ 1163  exit
+ 1164  kubectl get pods -A
+ 1165  ls -al 
+ 1166  cd /data/
+ 1167  ls -al wp-data/
+ 1168  ls -al mysql-volume/
+ 1169  kubectl get pods -A
+ 1170  kubectl describe pod wordpress-mysql-85ff59475f-m9bj2
+ 1171  exit
+ 1172  kubectl get pods -A
+ 1173  kubectl get ingress -A
+ 1174  kubectl describe ingress nginx-test
+ 1175  kubectl get pods -A
+ 1176  kubectl describe pods wordpress-5bbd7fd785-9p5kx
+ 1177  ls - al /data/wp-data/
+ 1178  ls -al /data/wp-data/
+ 1179  ls -al /data/mysql-volume/
+ 1180  kubectl logs wordpress-5bbd7fd785-9p5kx
+ 1181  kubectl get pods -A
+ 1182  kubectl logs ordpress-mysql-85ff59475f-m9bj2
+ 1183  kubectl logs wordpress-mysql-85ff59475f-m9bj2
+ 1184  kubectl get svc -A
+ 1185  ls
+ 1186  cd mysql-wp/
+ 1187  kubectl delete -k ./
+ 1188  kubectl apply -k ./
+ 1189  history | grep "secret"
+ 1190  kubectl describe secret directoryx-admin-token-5p8nm -n kube-system
+ 1191  ls
+ 1192  kubectl apply -f mysql-pv.yaml 
+ 1193  kubectl apply -f wp-pv.yaml 
+ 1194  cd ../
+ 1195  mkdir hpa-test
+ 1196  cd hpa-test/
+ 1197  nano Dockerfile
+ 1198  nano index.php
+ 1199  nano hpa-test.yaml
+ 1200  kubectl apply -f hpa-test.yaml 
+ 1201  kubectl get svc -A
+ 1202  kubectl autoscale deployment php-apache --cpu-percent=50 --min=1 --max=10
+ 1203  kubectl get hpa
+ 1204  kubectl get deployment
+ 1205  kubectl get pods -A
+ 1206  kubectl run -it --rm load-generator --image=busybox /bin/sh
+ 1207  exit
+ 1208  kubectl get pods
+ 1209  kubectl get hpa
+ 1210  kubectl describe hpa php-apache
+ 1211  kubectl delete hpa php-apache
+ 1212  kubectl describe hpa php-apache
+ 1213  kubectl get pods
+ 1214  kubectl top pods
+ 1215  kubectl autoscale deployment php-apache --cpu-percent=80 --min=1 --max=5
+ 1216  kubectl get hpa
+ 1217  kubectl get pods -A
+ 1218  kubectl logs my-release-metrics-metrics-server-8694db558-px4k
+ 1219  kubectl logs my-release-metrics-metrics-server-8694db558-px4kl
+ 1220  cd mysql-wp/
+ 1221  kubectl delete -k ./
+ 1222  kubectl logs my-release-metrics-metrics-server-8694db558-px4kl
+ 1223  kubectl top node
+ 1224  kubectl get hpa
+ 1225  kubectl get pods -A
+ 1226  kubectl get hpa
+ 1227  kubectl get pods -A
+ 1228  kubectl get svc -A
+ 1229  exit
+ 1230  kubectl get pods -A
+ 1231  kubectl get hpa
+ 1232  kubectl logs kubernetes-dashboard-7f99b75bf4-qjwgl
+ 1233  kubectl logs kubernetes-dashboard-7f99b75bf4-qjwgl -n kubernetes-dashboard
+ 1234  kubectl logs dashboard-metrics-scraper-6b4884c9d5-zrzxk -n kubernetes-dashboard
+ 1235  ls
+ 1236  cd hpa-test/
+ 1237  ls
+ 1238  kubectl delete -f hpa-test.yaml 
+ 1239  kubectl get hpa
+ 1240  kubectl delete hpa php-apache
+ 1241  kubectl logs dashboard-metrics-scraper-6b4884c9d5-zrzxk -n kubernetes-dashboard
+ 1242  kubectl logs kubernetes-dashboard-7f99b75bf4-qjwgl -n kubernetes-dashboard
+ 1243  kubectl get svc -A -o wide
+ 1244  kubectl describe svc dashboard-metrics-scraper 
+ 1245  kubectl describe svc dashboard-metrics-scraper  -n kubernetes-dashboard
+ 1246  kubectl get node
+ 1247  kubectl describe svc dashboard-metrics-scraper  -n kubernetes-dashboard
+ 1248  exit
+ 1249  kubectl get svc -A
+ 1250  kubectl describe svc dashboard-metrics-scraper -n kubernetes-dashboard
+ 1251  kubectl describe node kworker2
+ 1252  kubectl top node
+ 1253  cd hpa-test/
+ 1254  ls
+ 1255  kubectl apply -f hpa-test.yaml 
+ 1256  history 
+ 1257  kubectl autoscale deployment php-apache --cpu-percent=80 --min=1 --max=5
+ 1258  kubectl edit ingress nginx-test
+ 1259  kubectl get pods -A
+ 1260  kubectl get svc -A
+ 1261  kubectl describe ingress nginx-test
+ 1262  kubectl get hpa
+ 1263  kubectl get deployment -A -o wide
+ 1264  kubectl get hpa -o wide
+ 1265  ab
+ 1266  kubectl get hpa -o wide
+ 1267  kubectl run -it --rm load-generator --image=busybox /bin/sh
+ 1268  kubectl get hpa -o wide
+ 1269  kubectl top pod
+ 1270  kubectl get hpa -o wide
+ 1271  kubectl get deployment
+ 1272  kubectl describe deployment php-apache
+ 1273  kubectl get hpa -o wide
+ 1274  kubectl get pods
+ 1275  kubectl get pods -o wide
+ 1276  kubectl get hpa -o wide
+ 1277  kubectl get pods -o wide
+ 1278  kubectl top pods
+ 1279  kubectl get hpa -o wide
+ 1280  kubectl top node
+ 1281  helm install stable/prometheus-operator --generate-name
+ 1282  kubectl --namespace default get pods -l "release=prometheus-operator-1598013358"
+ 1283  kubectl get hpa -o wide
+ 1284  kubectl get pods
+ 1285  kubectl describe pods prometheus-prometheus-operator-159801-prometheus-0
+ 1286  prometheus-operator-1598013358-grafana-65b9546666-wpfm4
+ 1287  kubectl describe pods prometheus-operator-1598013358-grafana-65b9546666-wpfm4
+ 1288  kubectl get svc
+ 1289  kubectl edit svc prometheus-operator-158518-prometheus
+ 1290  kubectl edit svc prometheus-operator-159801-prometheus
+ 1291  kubectl edit ingress nginx-test
+ 1292  kubectl get svc
+ 1293  kubectl edit ingress nginx-test
+ 1294  kubectl get secret prometheus-operator-1585188007-grafana -o jsonpath=”{.data.admin-password}” | base64 --decode ; echo
+ 1295  kubectl get secret prometheus-operator-1598013358-grafana -o jsonpath=”{.data.admin-password}” | base64 --decode ; echo
+ 1296  kubectl get secret prometheus-operator-1598013358-grafana -o jsonpath="{.data.admin-password}" | base64 --decode ; echo
+ 1297  kubectl get svc
+ 1298  kubectl top node
+ 1299  kubectl top pods
+ 1300  kubectl get pods
+ 1301  kubectl get svc
+ 1302  kubectl apply -f https://k8s.io/examples/admin/dns/dnsutils.yaml
+ 1303  kubectl get pods dnsutils
+ 1304  kubectl exec -i -t dnsutils -- nslookup kubernetes.default
+ 1305  kubectl get svc -A
+ 1306  kubectl get configmap
+ 1307  kubectl get configmap -A
+ 1308  kubectl edit configmap coredns -n kube-system
+ 1309  kubectl exec -i -t dnsutils -- nslookup kubernetes.default
+ 1310  exit
+ 1311  kubectl get pods -A
+ 1312  kubectl get svc -A
+ 1313  kubectl exec -i -t dnsutils -- nslookup kubernetes.default
+ 1314  kubectl exec -ti dnsutils -- cat /etc/resolv.conf
+ 1315  kubectl exec -i -t dnsutils -- nslookup google.com
+ 1316  kubectl logs --namespace=kube-system $(kubectl get pods --namespace=kube-system -l k8s-app=kube-dns -o name) -c kubedns
+ 1317  kubectl get pods -A
+ 1318  kubectl logs coredns-66bff467f8-7c9dq -n kube-system
+ 1319  kubectl get pods -A
+ 1320  kubectl logs coredns-66bff467f8-7c9dq -n kube-system
+ 1321  -n kube-system describe deployment coredns'
+ 1322  kubectl -n kube-system describe deployment coredns
+ 1323  kubectl apply -f https://docs.projectcalico.org/v3.0/getting-started/kubernetes/installation/hosted/kubeadm/1.7/calico.yaml
+ 1324  kubectl delete -f https://docs.projectcalico.org/v3.0/getting-started/kubernetes/installation/hosted/kubeadm/1.7/calico.yaml
+ 1325  update-alternatives --set iptables /usr/sbin/iptables-legacy
+ 1326  sudo iptables -P FORWARD ACCEPT
+ 1327  kubectl get pods -A
+ 1328  kubectl exec -i -t dnsutils -- nslookup google.com
+ 1329  sudo iptables -S
+ 1330  sudo apt-get install curl ebtables ethtool gpg gpg-agent
+ 1331  apt-get install curl ebtables ethtool gpg gpg-agent
+ 1332  tcpdump -i any -vvv -n host 192.168.0.6
+ 1333  sudo tcpdump -i any -vvv -n host 192.168.0.6
+ 1334  ip route
+ 1335  kubectl get pods -A
+ 1336  kubectl get svc -A
+ 1337  ip rule
+ 1338  kubectl get endpoints kubernetes
+ 1339  curl https://10.96.0.1:6443/version
+ 1340  ufw status
+ 1341  sudo ufw status
+ 1342  kubectl get pods -A
+ 1343  kubectl logs coredns-66bff467f8-8ts8m -n kube-system
+ 1344  kubectl logs coredns-66bff467f8-7c9dq
+ 1345  kubectl logs coredns-66bff467f8-7c9dq -n kube-system
+ 1346  kubectl logs calico-kube-controllers-5fbfc9dfb6-jgl28 -n kube-system
+ 1347  time
+ 1348  date
+ 1349  kubectl edit calico-kube-controllers-5fbfc9dfb6-jgl28 -n kube-system
+ 1350  kubectl edit pods calico-kube-controllers-5fbfc9dfb6-jgl28 -n kube-system
+ 1351  kubectl get secret -A
+ 1352  kubectl edit pods calico-kube-controllers-5fbfc9dfb6-jgl28 -n kube-system
+ 1353  echo 1 > /proc/sys/net/ipv4/conf/all/rp_filter
+ 1354  sudo echo 1 > /proc/sys/net/ipv4/conf/all/rp_filter
+ 1355  kubectl get clusterrole calico-node
+ 1356  kubectl describe pod calico-kube-controller
+ 1357  kubectl get pods
+ 1358  kubectl get pods -a
+ 1359  kubectl get pods -A
+ 1360  kubectl describe pods calico-kube-controllers-5fbfc9dfb6-jgl28
+ 1361  kubectl describe pods calico-kube-controllers-5fbfc9dfb6-jgl28 -n kube-system
+ 1362  kubectl edit pods calico-kube-controllers-5fbfc9dfb6-jgl28 -n kube-system
+ 1363  kubectl get secret -A
+ 1364  kubectl edit pods calico-kube-controllers-5fbfc9dfb6-jgl28 -n kube-system
+ 1365  kubectl describe pods calico-kube-controllers-5fbfc9dfb6-jgl28 -n kube-system
+ 1366  kubectl get secret -A
+ 1367  kubectl describe secret calico-kube-controllers-token-7pqhf -n kube-system
+ 1368  kubectl get secret -A | grep "calico-kube-controllers-token-7pqhf"
+ 1369  kubectl get cr
+ 1370  kubectl get clusterrole
+ 1371  exit
+ 1372  kubectl create -f https://docs.projectcalico.org/v3.9/manifests/calico.yaml
+ 1373  kubectl delete -f kubectl create -f https://docs.projectcalico.org/v3.9/manifests/calico.yam
+ 1374  kubectl delete -f https://docs.projectcalico.org/v3.9/manifests/calico.yaml
+ 1375  kubectl apply -f https://docs.projectcalico.org/v3.9/manifests/calico.yaml
+ 1376  kubectl get pods -A
+ 1377  exit
+ 1378  kubectl get pods -A
+ 1379  kubectl exec -i -t dnsutils -- nslookup google.com
+ 1380  kubectl get pods
+ 1381  kubectl get pods -A
+ 1382  kubectl logs calico-kube-controllers-5fbfc9dfb6-g8s7x -n kube-system
+ 1383  kubectl logs calico-node-5m9tq
+ 1384  kubectl logs calico-node-5m9tq -n kube-system
+ 1385  kubectl get pods -A
+ 1386  kubectl get node
+ 1387  kubectl top node
+ 1388  kubectl -n kube-system logs oredns-66bff467f8-7c9dq
+ 1389  kubectl -n kube-system
+ 1390  kubectl -n kube-system oredns-66bff467f8-7c9dq
+ 1391  kubectl -n kube-system coredns-66bff467f8-7c9dq
+ 1392  kubectl get pods -A
+ 1393  kubectl logs oredns-66bff467f8-7c9dq
+ 1394  kubectl logs coredns-66bff467f8-7c9dq -n kube-system
+ 1395  kubectl logs coredns-66bff467f8-8ts8m -n kube-system
+ 1396  kubectl describe coredns-66bff467f8-8ts8m 
+ 1397  kubectl describe coredns-66bff467f8-8ts8m
+ 1398  kubectl describe pods coredns-66bff467f8-8ts8m
+ 1399  kubectl describe pods coredns-66bff467f8-8ts8m -n kube-system
+ 1400  kubectl get pods -A
+ 1401  kubectl describe pods alertmanager-prometheus-operator-159801-alertmanager-0
+ 1402  ls
+ 1403  history
+ 1404  history > history.txt 
+ 1405  kubectl get ep -n kube-system
+ 1406  cat /etc/recolv.conf
+ 1407  sudo nano /etc/resolv.conf 
+ 1408  kubectl get pods -A
+ 1409  sudo su
+ 1410  kubectl get pods -A
+ 1411  kubectl logs coredns-66bff467f8-7c9dq
+ 1412  kubectl logs coredns-66bff467f8-7c9dq -n kube-system
+ 1413  kubectl get svc -A
+ 1414  ping 10.0.2.3
+ 1415  ip addr
+ 1416  ping 192.168.189.9
+ 1417  kubectl get pods -A
+ 1418  cat /proc/sys/net/ipv4/conf/all/rp_filter
+ 1419  kubectl logs calico-kube-controllers-5fbfc9dfb6-g8s7x -n kube-system
+ 1420  kubectl describe pods calico-kube-controllers-5fbfc9dfb6-g8s7x -n kube-system
+ 1421  kubectl get ippools
+ 1422  kubectl describe ippools default-ipv4-ippool
+ 1423  kubectl get pods -A
+ 1424  nslookup kubernetes
+ 1425  kubectl get svc
+ 1426  nslookup php-apache
+ 1427  kubectl get ep
+ 1428  kubectl get ep -A
+ 1429  ping 192.168.189.8
+ 1430  sudo nano /etc/resolv.conf 
+ 1431  nslookup php-apache
+ 1432  kubectl describe svc kube-dns
+ 1433  kubectl describe svc kube-dns -n kube-system
+ 1434  ping 10.96.0.10
+ 1435  ping 10.96.0.0
+ 1436  ping 10.96.0.10
+ 1437  ls
+ 1438  kubectl get pods -A
+ 1439  nslookup google.com
+ 1440  kubectl get pods -A
+ 1441  sudo nano /etc/resolv.conf 
+ 1442  nslookup google.com
+ 1443  kubectl logs calico-kube-controllers-5fbfc9dfb6-g8s7x -n kube-system
+ 1444  history
+ 1445  kubectl logs coredns-66bff467f8-7c9dq -n kube-system
+ 1446  kubectl get ep -A
+ 1447  ifconfig
+ 1448  kubectl logs coredns-66bff467f8-7c9dq -n kube-system
+ 1449  ping php-server
+ 1450  kubectl get pods -A
+ 1451  kubectl get pods dnsutils
+ 1452  kubectl apply -f https://k8s.io/examples/admin/dns/dnsutils.yaml
+ 1453  kubectl get svc --namespace=kube-system
+ 1454  kubectl get svc 
+ 1455  nslookup apple-service 10.96.0.10
+ 1456  ping 10.96.0.10
+ 1457  sudo nano /etc/hosts
+ 1458  sudo nano /etc/resolv.conf 
+ 1459  kubectl apply -f https://k8s.io/examples/admin/dns/dnsutils.yaml
+ 1460  kubectl edit configmap 
+ 1461  kubectl -n kube-system edit configmap coredns
+ 1462  kubectl apply -f https://k8s.io/examples/admin/dns/dnsutils.yaml
+ 1463  kubectl get pods -A
+ 1464  history | grep secret
+ 1465  kubectl describe secret directoryx-admin-token-5p8nm -n kube-system
+ 1466  kubectl get pods -A
+ 1467  kubectl logs coredns-66bff467f8-7c9dq -n kube-system
+ 1468  kubectl -n kube-system edit configmap coredns
+ 1469  kubectl logs coredns-66bff467f8-7c9dq -n kube-system
+ 1470  kubectl apply -f https://k8s.io/examples/admin/dns/dnsutils.yaml
+ 1471  kubectl logs coredns-66bff467f8-7c9dq -n kube-system
+ 1472  ping 192.168.189.9
+ 1473  ping 10.0.2.3
+ 1474  kubectl logs coredns-66bff467f8-7c9dq -n kube-system
+ 1475  ifconfig
+ 1476  kubectl -n kube-system edit configmap coredns
+ 1477  kubectl run -it --rm --restart=Never --image=busybox busybox
+ 1478  exit
+ 1479  kubectl get pods -A
+ 1480  kubectl get svc -A
+ 1481  kubectl get ingress
+ 1482  kubectl edit ingress nginx-test
+ 1483  kubectl get svc -A -o wide
+ 1484  history | grep patch
+ 1485  kubectl patch svc prometheus-operator-159801-prometheus -p '{"spec":{"externalIPs":["172.42.42.101"]}}' 
+ 1486  kubectl get svc -A -o wide
+ 1487  exit
+ 1488  kubectl get pods -A
+ 1489  kubectl get svc -A -o wide
+ 1490  kubectl describe pods ingress-nginx-controller 
+ 1491  kubectl describe pods ingress-nginx-controller -n ingress-nginx
+ 1492  history | grep "auto"
+ 1493  kubectl autoscale deployment ingress-nginx-controller --cpu-percent=80 --min=1 --max=5
+ 1494  kubectl autoscale deployment ingress-nginx-controller --cpu-percent=80 --min=1 --max=5 -n ingress-nginx
+ 1495  kubetctl get hpa
+ 1496  kubectl get hpa
+ 1497  kubectl get hpa -n ingress-nginx
+ 1498  kubectl autoscale deployment ingress-nginx-controller --cpu-percent=80 --min=2 --max=5 -n ingress-nginx
+ 1499  kubectl delete hpa ingress-nginx-controller -n ingress-nginx
+ 1500  kubectl autoscale deployment ingress-nginx-controller --cpu-percent=80 --min=2 --max=5 -n ingress-nginx
+ 1501  kubectl get hpa -n ingress-nginx
+ 1502  kubectl get hpa 
+ 1503  kubectl get hpa -n ingress-nginx
+ 1504  kubectl get hpa 
+ 1505  kubectl get hpa -n ingress-nginx
+ 1506  kubectl get hpa 
+ 1507  kubectl get hpa -n ingress-nginx
+ 1508  kubectl get hpa 
+ 1509  kubectl get pods
+ 1510  kubectl get hpa 
+ 1511  kubectl get hpa -n ingress-nginx
+ 1512  kubectl get hpa 
+ 1513  kubectl get hpa -n ingress-nginx/
+ 1514  kubectl get hpa -n ingress-nginx
+ 1515  kubectl describe ingress nginx-test
+ 1516  kubectl describe ingress nginx-test -n jenkins
+ 1517  kubectl autoscale deployment ingress-nginx-controller --cpu-percent=80 --min=2 --max=5 -n jenkins
+ 1518  kubectl describe ingress nginx-test -n jenkins
+ 1519  kubectl get hpa -n ingress-nginx
+ 1520  kubectl describe ingress-nginx-controller -n ingress-nginx
+ 1521  kubectl describe pods ingress-nginx-controller -n ingress-nginx
+ 1522  kubectl get hpa 
+ 1523  kubectl get pods 
+ 1524  kubectl get pods -A
+ 1525  kubectl describe pods ingress-nginx-controller-7fd7d8df56-l5kq5 -n ingress-nginx
+ 1526  kubectl get deployment -A
+ 1527  kubectl edit deployment ingress-nginx-controller -n ingress-nginx
+ 1528  kubectl describe deployment ingress-nginx-controller -n ingress-nginx
+ 1529  kubectl edit deployment ingress-nginx-controller -n ingress-nginx
+ 1530  kubectl describe deployment ingress-nginx-controller -n ingress-nginx
+ 1531  kubectl get deployment -A
+ 1532  kubectl get pods -A
+ 1533  kubectl describe pods ingress-nginx-controller-7fd7d8df56-44fdf -n ingress-nginx
+ 1534  kubectl get pods -A
+ 1535  kubectl describe pods ingress-nginx-controller-7fd7d8df56-l5kq5 -n ingress-nginx
+ 1536  kubectl get pods -A
+ 1537  kubectl describe ingress-nginx-controller-6975bbfc76-nzcsc -n ingress-nginx
+ 1538  kubectl describe pods ingress-nginx-controller-6975bbfc76-nzcsc -n ingress-nginx
+ 1539  history
+ 1540  kubectl edit deployment ingress-nginx-controller -n ingress-nginx
+ 1541  kubectl get pods -A
+ 1542  kubectl describe pods ingress-nginx-controller-7d8c769768-vwdwp -n ingress-nginx
+ 1543  kubectl get pods -A
+ 1544  kubectl get deployment
+ 1545  kubectl get deployment -n ingress-nginx
+ 1546  kubectl edit deployment quay.io/kubernetes-ingress-controller/nginx-ingress-controller-amd64:goroutines -n ingress-nginx
+ 1547  kubectl edit deployment ingress-nginx-controller -n ingress-nginx
+ 1548  kubectl describe deployment ingress-nginx-controller -n ingress-nginx
+ 1549  kubectl get svc -n ingress-nginx
+ 1550  kubectl get pods -A
+ 1551  kubectl describe jenkins-687c94f6bf-ls5dg -n jenkins
+ 1552  kubectl describe pods jenkins-687c94f6bf-ls5dg -n jenkins
+ 1553  kubectl get deployment
+ 1554  kubectl get deployment -n jenkins
+ 1555  history
+ 1556  kubectl autoscale deployment jenkins --cpu-percent=80 --min=2 --max=5 -n jenkins
+ 1557  kubectl get pods -A
+ 1558  kubectl describe pods jenkins-687c94f6bf-vv9b4 -n jenkins
+ 1559  kubectl get hpa 
+ 1560  kubectl get hpa -n
+ 1561  kubectl get hpa -n ingress-nginx
+ 1562  kubectl edit deployment ingress-nginx-controller -n ingress-nginx
+ 1563  kubectl get hpa -n ingress-nginx
+ 1564  kubectl edit hpa ingress-nginx-controller -n ingress-nginx
+ 1565  kubectl get hpa -n ingress-nginx
+ 1566  kubectl get pods -A
+ 1567  exit
+ 1568  kubectl get pods -A
+ 1569  kubectl describe pods jenkins-687c94f6bf-ls5dg -n jenkins
+ 1570  kubectl get pods -A
+ 1571  kubectl describe pods jenkins-687c94f6bf-vv9b4 -n jenkins
+ 1572  kubectl get pv -A
+ 1573  kubectl get pods -A
+ 1574  kubectl get ingress
+ 1575  kubectl describe ingress nginx-test
+ 1576  kubectl get pods -A
+ 1577  kubectl describe pods jenkins-687c94f6bf-vv9b4 -n jenkins
+ 1578  exit
+ 1579  kubectl get pods -A
+ 1580  kubectl logs coredns-66bff467f8-7c9dq -n kube-system
+ 1581  kubectl apply -f https://k8s.io/examples/admin/dns/dnsutils.yaml
+ 1582  kubectl get pods dnsutils
+ 1583  kubectl exec -i -t dnsutils -- nslookup kubernetes.default
+ 1584  nano /etc/resolv.conf 
+ 1585  sudo nano /etc/resolv.conf 
+ 1586  kubectl exec -i -t dnsutils -- nslookup kubernetes.default
+ 1587  kubectl get pods dnsutils
+ 1588  kubectl exec -i -t dnsutils -- nslookup kubernetes.default
+ 1589  kubectl get svc
+ 1590  kubectl exec -i -t dnsutils -- ping 10.96.68.102 -c2
+ 1591  systemctl disable firewalld && systemctl stop firewalld
+ 1592  sudo systemctl disable firewalld && systemctl stop firewalld
+ 1593  kubectl exec -i -t dnsutils -- traceroute 10.96.68.102 
+ 1594  ping 10.0.2.2
+ 1595  kubectl exec -i -t dnsutils -- traceroute php-apache
+ 1596  exit
+ 1597  kubectl exec -i -t dnsutils -- traceroute 10.96.68.102 
+ 1598  kubectl get pods
+ 1599  kubectl get pods -A
+ 1600  history 
+ 1601  cat history.txt 
+ 1602  history >> history.txt 
